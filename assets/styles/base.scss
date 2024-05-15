@@ -4,6 +4,7 @@ $breakpoint-lg: 1024px;
 @import "./_fonts.scss";
 @import "./_colors.scss";
 @import "./_articles.scss";
+@import "./_markdown.scss";
 
 @import "./widgets/author.scss";
 @import "./widgets/social.scss";
@@ -50,19 +51,6 @@ main {
     align-items: center;
     flex: 1;
     gap: 3em;
-}
-
-.button {
-    text-decoration: none;
-    cursor: pointer;
-
-    color: var(--text-tertiary-color);
-    transition: all var(--transition-duration) ease;
-    
-    &:hover {
-        transform: scale(1.025);
-        color: var(--text-accent-color);
-    }
 }
 
 svg {

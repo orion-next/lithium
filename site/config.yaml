@@ -71,3 +71,19 @@ related:
   indices:
     - name: tags
       weight: 100
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: false
+    # tableOfContents:
+    #     endLevel: 4
+    #     ordered: true
+    #     startLevel: 3
+    highlight:
+      noClasses: true
+      codeFences: true
+      guessSyntax: true
+      tabWidth: 4
+      lineNoStart: 1
+      lineNos: true

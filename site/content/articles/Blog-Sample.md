@@ -10,8 +10,7 @@ description: "Sample article showcasing basic Markdown syntax and formatting for
 image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=1024&q=60"
 
 tags:
-  - "themes"
-  - "template"
+  - template
 
 display:
   readingtime: true
