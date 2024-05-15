@@ -1,0 +1,56 @@
+:root {
+    --white: #FFF;
+    --black: #000;
+}
+
+[data-color-scheme="dark"] {
+    --background-color: #1D1F25;
+    --background-primary-color: #33374675;
+    --background-secondary-color: #33374650;
+    --background-accent-color: #333746;
+
+    --text-color: rgb(195, 198, 207);
+    --text-secondary-color: #9A9FAE;
+    --text-tertiary-color: rgb(166, 171, 184);
+    --text-muted-color: #9A9FAE90;
+    // --text-muted-color: rgb(76, 81, 95);
+    --text-accent-color: rgb(215, 216, 223);
+
+    --font-size: 1em;
+}
+
+.bg-default {
+    background-color: var(--background-color);
+}
+
+.bg-primary {
+    background-color: var(--background-primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--background-secondary-color);
+}
+
+.bg-accent {
+    background-color: var(--background-accent-color);
+}
+
+.default {
+    color: var(--text-color);
+}
+
+.secondary {
+    color: var(--text-secondary-color);
+}
+
+.tertiary {
+    color: var(--text-tertiary-color);
+}
+
+.accent {
+    color: var(--text-accent-color);
+}
+
+.muted {
+    color: var(--text-muted-color);
+}

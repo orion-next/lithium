@@ -1,0 +1,33 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-self: stretch;
+    position: relative;
+    gap: 1em;
+
+    h4 {
+        color: var(--text-color);
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .aside {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        min-width: 200px;
+        max-width: 200px;
+    }
+
+    .widget.author {
+        min-width: unset;
+    }
+}
+
+@media (min-width: 1024px) {
+    .aside {
+        min-width: 300px;
+        max-width: 300px;
+    }
+}

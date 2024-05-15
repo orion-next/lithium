@@ -1,0 +1,32 @@
+.container {
+    margin-top: 1em;
+}
+
+.widget.author {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .container {
+        margin-top: 5em;
+    }
+
+    .widget.author {
+        max-width: 600px;
+    }
+}

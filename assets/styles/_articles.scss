@@ -1,0 +1,102 @@
+.articles {
+    display: grid;
+    gap: 2em;
+
+    article {
+        color: var(--text-color);
+        background-color: var(--background-secondary-color);
+        border-radius: 1em;
+
+        box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.05);
+        transition: all var(--transition-duration) ease;
+
+        &:hover {
+            transform: scale(1.02);
+            transition: all var(--transition-duration) ease;
+        }
+
+        .article-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 1.5em;
+            gap: 1.25em;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+        }
+
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: var(--text-size-sm);
+            color: var(--text-muted-color);
+
+            span {
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+
+                i {
+                    margin: 0 0.5em;
+
+                    svg {
+                        width: 1.25em;
+                        height: 1.25em;
+                    }
+                }
+            }
+        } //ml:0.5em text:left
+    }
+}
+
+.tag {
+    display: block;
+
+    padding: 0.65em 0.75em;
+    border-radius: 0.5em;
+
+    line-height: 1;
+    font-size: var(--text-size-sm);
+
+    background-color: #343f53;
+    text-transform: uppercase;
+}
+
+.pagination {
+    --icon-size: 2em;
+
+    color: var(--text-color);
+    grid-column: span 3 / span 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 1em;
+
+    span {
+        min-width: var(--icon-size);;
+    }
+
+    svg {
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .articles {
+        grid-template-columns: repeat(2, minmax(0px, 1fr));
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    .articles {
+        grid-template-columns: repeat(3, minmax(0px, 1fr));
+    }
+}
