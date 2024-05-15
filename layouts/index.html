@@ -1,0 +1,21 @@
+{{- define "main" -}}
+    <!-- Show articles list -->
+    {{ $content := partial "utilities/articles-list.html" . }}
+
+    <section class="articles">
+    {{- if $content -}}
+        {{- range $index, $element := $content.Pagination.Pages -}}
+            <article class="bg-secondary default overflow:hidden r:1em">
+                <a href="{{- .RelPermalink -}}">
+                    {{- partial "article/preamble.html" . -}}
+                </a>
+            </article>
+        {{- end -}}
+    {{- else -}}
+        <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
+    {{- end -}}
+
+    <!-- Pagination -->
+    {{- partial "common/pagination.html" . -}}
+    </section>
+{{- end -}}

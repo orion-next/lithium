@@ -1,0 +1,12 @@
+name = "Lithium"
+description = "Feature packed blog theme designed for professional creators"
+
+homepage = "https://orion-next.com"
+tags = []
+features = []
+
+min_version = "0.41.0"
+
+[author]
+  name = "Vidush H. Namah"
+  homepage = "https://vnsnippets.github.io/"

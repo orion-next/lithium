@@ -1,0 +1,25 @@
+<!-- Read image from article parameters -->
+{{- $permalink := 0 }}
+{{- $imageReference := . -}}
+
+{{- if $imageReference -}}
+    <!-- Check if image is from an external source -->
+    {{- $imageURL := urls.Parse $imageReference -}}
+    {{- if or (eq $imageURL.Scheme "http") (eq $imageURL.Scheme "https") -}}
+        <!-- Image is from an external source -->
+        {{- $permalink = $imageReference -}}
+    {{- else -}}
+        <!-- Image is within project -->
+        {{- $resource = .Context.Resources.GetMatch (printf "%s" ($imageReference | safeURL)) -}}
+
+        {{- if $resource -}}
+            <!-- Image is in Assets -->
+            {{- $permalink = $resource .RelPermalink -}}
+        {{- else -}}
+            <!-- Image Reference is a relative link -->
+            {{- $permalink = relURL $imageReference -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- return $permalink -}}

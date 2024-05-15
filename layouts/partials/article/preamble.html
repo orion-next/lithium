@@ -1,0 +1,47 @@
+<header class="d:flex flex:col" href="{{- .RelPermalink -}}">
+    {{- if .Params.Image -}}
+    {{- $image := partial "utilities/image.html" .Params.Image -}}
+    <section class="d:flex flex:1">
+        <img class="object:cover w:full max-h:200px max-h:300px@sm" src="{{- $image -}}" alt="{{- .Title -}}" />
+    </section>
+    {{- end -}}
+
+    <section class="article-details">
+        {{- if .Params.Tags -}}
+        <section class="article-categories">
+            {{- range (.GetTerms "Tags") -}}
+            <span class="tag" href="{{- .RelPermalink -}}">{{- .LinkTitle -}}</span>
+            {{- end -}}
+        </section>
+        {{- end -}}
+
+        <section>
+            <h4 class="mb:0.5em default">{{- .Title -}}</h4>
+            <p class="secondary">{{- .Description -}}</p>
+        </section>
+
+        {{- $ShowReadingTime := default true .Params.Display.ReadingTime -}}
+        {{- $ShowArticleDate := and (not .Date.IsZero) (default true .Params.Display.Date) -}}
+        {{- if or $ShowReadingTime $ShowArticleDate -}}
+        <section class="article-footer muted d:flex jc:space-between">
+            {{- if $ShowArticleDate -}}
+            <span class="d:flex ai:center">
+                <i class="svg">{{- partial "utilities/icon.html" "calendar.svg" -}}</i>
+                <time class="ml:0.5em text:left">
+                    {{- .Date.Format .Site.Params.Articles.DateFormat -}}
+                </time>
+            </span>
+            {{- end -}}
+
+            {{- if $ShowReadingTime -}}
+            <span class="d:flex ai:center">
+                <time class="mr:0.5em text:right">
+                    {{- T "Articles.ReadTime" .ReadingTime -}}
+                </time>
+                <i class="svg">{{- partial "utilities/icon.html" "clock.svg" -}}</i>
+            </span>
+            {{- end -}}
+        </section>
+        {{- end -}}
+    </section>
+</header>

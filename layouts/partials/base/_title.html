@@ -1,0 +1,13 @@
+{{- $title := .Title -}}
+{{- $siteTitle := .Site.Title -}}
+
+{{- if .IsHome -}}
+    <!-- Homepage -->
+    {{ $title = $siteTitle}}
+
+{{- else if eq .Kind "term" -}}
+    <!-- Taxonomy page -->
+    <!-- TODO  -->
+{{- end -}}
+
+{{- return $title -}}

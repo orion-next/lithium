@@ -1,0 +1,27 @@
+{{- $ColorScheme := default "auto" .Site.Params.Themes.Default -}}
+
+<!DOCTYPE html>
+<html lang="{{ .Site.Language }}" data-color-scheme="{{- $ColorScheme -}}">
+    <head>
+        {{- partial "base/head.html" . -}}
+    </head>
+
+    <body>
+        <main>
+        {{- if default true .Params.Widgets.Author -}}
+            {{- partial "widgets/author.html" . -}}
+        {{- end -}}
+        
+        {{- block "main" . -}}{{- end -}}
+
+        {{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
+            <aside class="aside">
+                {{- partial "widgets/search.html" . -}}
+                {{- partial "widgets/tags.html" . -}}
+            </aside>
+        {{- end -}}
+        </main>
+
+        {{- partial "common/footer.html" . -}}
+    </body>
+</html>
