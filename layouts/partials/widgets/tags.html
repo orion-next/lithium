@@ -9,7 +9,7 @@
     </header>
     <div class="cloud">
         {{- range first $limit $.Site.Taxonomies.tags.ByCount -}}
-        <a class="btn tag" href="{{- .Page.RelPermalink -}}">{{- .Page.Title }} ({{ .Count -}})</a>
+        <a class="button tag" href="{{- .Page.RelPermalink -}}">{{- .Page.Title }} ({{ .Count -}})</a>
         {{- end -}}
     </div>
 </section>

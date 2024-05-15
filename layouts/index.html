@@ -1,11 +1,17 @@
 {{- define "main" -}}
+<main class="container">
+    <!-- Show author (if enabled) -->
+    {{- if default true .Params.Widgets.Author -}}
+        {{- partial "widgets/author.html" . -}}
+    {{- end -}}
+
     <!-- Show articles list -->
     {{ $content := partial "utilities/articles-list.html" . }}
 
     <section class="articles">
     {{- if $content -}}
         {{- range $index, $element := $content.Pagination.Pages -}}
-            <article class="bg-secondary default overflow:hidden r:1em">
+            <article>
                 <a href="{{- .RelPermalink -}}">
                     {{- partial "article/preamble.html" . -}}
                 </a>
@@ -18,4 +24,13 @@
     <!-- Pagination -->
     {{- partial "common/pagination.html" . -}}
     </section>
+
+    <!-- Show widgets (if enabled) -->
+    {{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
+    <aside class="aside">
+        {{- partial "widgets/search.html" . -}}
+        {{- partial "widgets/tags.html" . -}}
+    </aside>
+    {{- end -}}
+</main>
 {{- end -}}

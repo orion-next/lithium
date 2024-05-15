@@ -1,0 +1,19 @@
+
+<section>
+    <!-- Social Links -->
+    {{- with .Site.Params.social -}}
+    <ul class="d:flex flex:row gap:10px">
+        {{- range . -}}
+        {{- $target := default "blank" .target -}}
+        <li>
+            <a class="social {{ .id }}" href="{{- .url -}}" target="_{{- $target -}}" title="{{- .name -}}">
+                {{- with .icon -}}
+                {{- $icon := printf "/social/%s" . -}}
+                {{- partial "utilities/icon.html" $icon -}}
+                {{- end -}}
+            </a>
+        </li>
+        {{- end -}}
+    </ul>
+    {{- end -}}
+</section>

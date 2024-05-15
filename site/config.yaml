@@ -1,67 +1,73 @@
-BaseURL: 'http://example.org/'
-LanguageCode: "en-gb"
+baseURL: 'http://example.org/'
+languageCode: "en-gb"
 
-Title: "Vidush H. Namah"
+title: "Vidush H. Namah"
 
-Theme: lithium
-ThemesDir: ../../
+theme: lithium
+themesDir: ../../
 
-Paginate: 5
+paginate: 12
 
 # googleAnalytics: G-XXX
 
-PERMALINKS:
+permalinks:
   Post: /a/:slug/
   Page: /:slug/
 
-PARAMS:
-  Meta:
+params:
+  meta:
     description: "Experience seamless design and innovative features tailored for success in the digital landscape."
     keywords: [ "Technology", "Photography" ]
     image: "/images/meta-image.png"
     avatar: "/images/avatar.png"
     author: "Vidush H. Namah"
 
-  Directory:
-    Blog: "articles"
+  directory:
+    blog: "articles"
   
-  Articles:
-    ShowReadTime: true
-    DateFormat: "Jan 02, 2006"
+  articles:
+    dateformat: "2006.01.02"
 
-  Themes:
-    ShowToggle: true
-    Default: dark
+  themes:
+    toggle: true
+    default: dark
   
-  Footer:
+  footer:
     Since: 2014
 
-  Features:
-    Widgets: true
+  features:
+    widgets: false
 
-  Social:
-    - Identifier: github
-      Name: GitHub
-      URL: https://github.com/vnsnippets
-      Icon: "github.svg"
+  ## Supported target: self, blank
+  social:
+    - id: github
+      name: GitHub
+      url: https://github.com/vnsnippets
+      icon: github.svg
 
-    - Identifier: linkedin
-      Name: LinkedIn
-      URL: https://linkedin.com/in/vnamah
-      Icon: "linkedin.svg"
+    - id: linkedin
+      name: LinkedIn
+      url: https://linkedin.com/in/vnamah
+      icon: linkedin.svg
 
-    - Identifier: instagram
-      Name: Instagram
-      URL: https://instagram.com/vnsnippets
-      Icon: "instagram.svg"
+    - id: instagram
+      name: Instagram
+      url: https://instagram.com/vnsnippets
+      icon: instagram.svg
 
-Menu:
+    - id: about
+      name: About
+      url: /about
+      icon: info.svg
+      target: self
+
+menu:
   main: []
 
-Related:
-  IncludeNewer: true
-  Threshold: 60
-  ToLower: false
-  Indices:
-    - Name: tags
-      Weight: 100
+related:
+  includenewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
