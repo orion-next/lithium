@@ -1,0 +1,8 @@
+{{ warnf "[Fetch/Icon] %s" . }}
+
+{{- $icon := resources.GetMatch (printf "icons/%s" .) -}}
+{{- if $icon -}}
+    {{- $icon.Content | safeHTML -}}
+{{- else -}}
+    {{- errorf "Error: '%s' cannot be found in the 'assets/icons' folder!" . -}}
+{{- end -}}

@@ -1,0 +1,11 @@
+{{ $output := 0 }}
+
+{{- $blogPages := where .Site.RegularPages "Section" .Site.Params.directory.blog -}}
+
+{{ if gt $blogPages 0 }}
+    {{ $filteredPages := where $blogPages "Params.hidden" "!=" true }}
+    {{ $paginatedPages := .Paginate ($filteredPages) }}
+    {{ $output = dict "Count" (len $filteredPages) "Pages" $filteredPages "Paginator" .Paginator "Pagination" $paginatedPages  }}
+{{ end }}
+
+{{ return $output }}

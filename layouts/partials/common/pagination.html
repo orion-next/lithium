@@ -1,0 +1,21 @@
+{{ if gt .Paginator.TotalPages 1 }}
+<nav class="default grid-col-span:2@xs d:flex ai:center jc:space-between py:1.5em mx:1em">
+    <span class="w:32px h:32px">
+    {{ if .Paginator.HasPrev }}
+    <a class="btn d:flex ai:center jc:center" href="{{- .Paginator.Prev.URL -}}">
+        {{- partial "utilities/icon.html" "round-arrow-left.svg" -}}
+    </a>
+    {{ end }}
+    </span>
+    
+    <span>{{- .Paginator.PageNumber }} of {{ .Paginator.TotalPages -}}</span>
+
+    <span class="w:32px h:32px">
+    {{ if .Paginator.HasNext }}
+    <a class="btn d:flex ai:center jc:center" href="{{- .Paginator.Next.URL -}}">
+        {{- partial "utilities/icon.html" "round-arrow-right.svg" -}}
+    </a>
+    {{ end }}
+    </span>
+</nav>
+{{ end }}

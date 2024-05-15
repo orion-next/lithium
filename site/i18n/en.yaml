@@ -1,0 +1,19 @@
+Site:
+  Author: "Vidush H. Namah"
+  Punchline: "Building the whole thing all over again"
+
+Articles:
+  ReadTime: "{{ .Count }} MIN READ"
+
+Footer:
+  Message: "Vidush H. Namah"
+
+Widgets:
+  Search:
+    Label: "Search"
+    Placeholder: "Type something..."
+  Tags:
+    Label: "Tags"
+
+Errors:
+  NoArticlesFound: "Writing the first blog article is always a challenge"

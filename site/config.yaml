@@ -1,0 +1,67 @@
+BaseURL: 'http://example.org/'
+LanguageCode: "en-gb"
+
+Title: "Vidush H. Namah"
+
+Theme: lithium
+ThemesDir: ../../
+
+Paginate: 5
+
+# googleAnalytics: G-XXX
+
+PERMALINKS:
+  Post: /a/:slug/
+  Page: /:slug/
+
+PARAMS:
+  Meta:
+    description: "Experience seamless design and innovative features tailored for success in the digital landscape."
+    keywords: [ "Technology", "Photography" ]
+    image: "/images/meta-image.png"
+    avatar: "/images/avatar.png"
+    author: "Vidush H. Namah"
+
+  Directory:
+    Blog: "articles"
+  
+  Articles:
+    ShowReadTime: true
+    DateFormat: "Jan 02, 2006"
+
+  Themes:
+    ShowToggle: true
+    Default: dark
+  
+  Footer:
+    Since: 2014
+
+  Features:
+    Widgets: true
+
+  Social:
+    - Identifier: github
+      Name: GitHub
+      URL: https://github.com/vnsnippets
+      Icon: "github.svg"
+
+    - Identifier: linkedin
+      Name: LinkedIn
+      URL: https://linkedin.com/in/vnamah
+      Icon: "linkedin.svg"
+
+    - Identifier: instagram
+      Name: Instagram
+      URL: https://instagram.com/vnsnippets
+      Icon: "instagram.svg"
+
+Menu:
+  main: []
+
+Related:
+  IncludeNewer: true
+  Threshold: 60
+  ToLower: false
+  Indices:
+    - Name: tags
+      Weight: 100

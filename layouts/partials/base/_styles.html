@@ -1,0 +1,6 @@
+<link href="https://unpkg.com/@master/normal.css" rel="stylesheet">
+    
+<!-- Load Shared SCSS -->
+{{ $sass := resources.Get "styles/base.scss" }}
+{{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">

@@ -1,0 +1,3 @@
+{{- $opts := dict "minify" hugo.IsProduction -}}
+{{- $script := resources.Get "scripts/index.ts" | js.Build $opts -}}
+<script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>

@@ -1,0 +1,67 @@
+<aside class="aside widget author">
+    <a href="{{- $.Site.BaseURL | relLangURL -}}">
+        <header class="d:flex flex:col gap:1.25em">
+            {{- with .Site.Params.Meta.Avatar -}}
+            <figure class="w:120px h:120px">
+                {{- $image := resources.Get . -}}
+                {{- if $image -}}
+                    {{- $image := $image.Resize "300x" -}}
+                    <img class="w:full h:full r:300px" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" alt="Avatar">
+                {{- else -}}
+                    {{- errorf "Avatar could not be loaded from %q." . -}}
+                {{- end -}}
+            </figure>
+            {{- end -}}
+
+            <section class="d:flex flex:col gap:0.5em">
+                <h4>{{- T "Site.Author" -}}</h4>
+                <p class="f:0.9em secondary">{{- T "Site.Punchline" -}}</p>
+            </section>
+        </header>
+    </a>
+
+    <section>
+        <!-- Social Links -->
+        {{- with .Site.Params.Social -}}
+        <ul class="d:flex flex:row gap:10px">
+            {{- range . -}}
+            <li>
+                <a class="btn d:flex bg-primary ai:center jc:center p:8px r:5px" href="{{- .URL -}}" target="_blank" title="{{- .Identifier -}}">
+                    {{- with .Icon -}}
+                    {{- $IconFile := printf "/social/%s" . -}}
+                    {{- partial "utilities/icon.html" $IconFile -}}
+                    {{- end -}}
+                </a>
+            </li>
+            {{- end -}}
+        </ul>
+        {{- end -}}
+    </section>
+
+    {{- $CurrentPage := . -}}
+    
+    <section>
+        <!-- Navigation Menu -->
+        {{- with .Site.Menus.main -}}
+        <ul class="d:flex flex:column gap:15px">
+            {{- range . -}}
+            <li>
+                {{- $IsCurrentPage := $CurrentPage.IsMenuCurrent "main" . -}}                
+                {{- $LinkStyle := "btn link d:flex ai:center p:6px gap:10px uppercase" -}}
+                {{- if $IsCurrentPage -}}
+                    {{- $LinkStyle = printf "%s %s" $LinkStyle "f:bold active" -}}
+                {{- end -}}
+
+                <a class="{{- $LinkStyle -}}" href="{{ .URL }}">
+                    {{- with .Params.Icon -}}
+                    {{- $IconFile := printf "/navigation/%s" . -}}
+                    {{- partial "utilities/icon.html" $IconFile -}}
+                    {{- end -}}
+                    <span>{{- .Name -}}</span>
+                </a>
+            </li>
+            {{- end -}}
+        </ul>
+        {{- end -}}
+    </section>
+</aside>
