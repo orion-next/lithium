@@ -1,4 +1,11 @@
 <article class="markdown">
+    <section>
+        <button class="btn back" onclick="window.history.back()">
+            <span class="icon">{{- partial "utilities/icon.html" "arrow-left.svg" -}}</span>
+            {{- T "Articles.BackButtonLabel" -}}
+        </button>
+    </section>
+
     <section class="article details">
         {{- if .Params.Tags -}}
         <section class="article tags">
