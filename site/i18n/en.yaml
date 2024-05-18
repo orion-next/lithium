@@ -1,6 +1,6 @@
 Site:
   Author: "Vidush H. Namah"
-  Punchline: "Building the whole thing all over again"
+  Punchline: "With a blend of creativity and precision, I craft digital solutions that bridge the gap between imagination and reality. Away from my screens, photography is my escape — a way to freeze time, evoke emotions, and tell stories"
 
 Articles:
   ReadTime: "{{ .Count }} MIN READ"

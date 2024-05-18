@@ -1,13 +1,12 @@
 ---
-author: "Vidush H. Namah"
-title: "Sample Markdown Blog Post"
-date: 2023-01-28T23:09:14+04:00
+author: Vidush H. Namah
+title: Sample Markdown Blog Post
+date: 2020-01-01
 draft: false
 
-aliases: ["blog-template"]
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
+description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 
-image: "https://images.unsplash.com/photo-1485988412941-77a35537dae4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=1024&q=60"
+image: https://source.unsplash.com/random?abstract&1
 
 tags:
   - template
@@ -42,6 +41,19 @@ References:
 [Currency Code List][html-currency-codes]  
 [Arrow Code List][html-arrow-codes]  
 [Miscellaneous Code List][html-misc-codes]
+
+### Footnotes
+
+This will contain a reference in the footnotes[^foot-first].  
+Click on the tiny number to see it[^foot-second].
+
+Another line can refer to the same footnote[^foot-second].
+
+<!-- Here is how you define the footnotes -->
+[^foot-first]: Footnote **can have markup** goodness too  
+    and multiple paragraphs.
+
+[^foot-second]: Click on the tiny arrow to go to the main text.
 
 <!-- Links Shortcode -->
 [html-currency-codes]: https://www.w3schools.com/charsets/ref_utf_currency.asp
@@ -176,7 +188,7 @@ And this is a direct link: https://vnsnippets.github.io/
 
 
 ## Images
-![this-is-the-alt-text](https://bit.ly/3kPGHfS)  
+![this-is-the-alt-text](https://bit.ly/3kPGHfS?w=1000)  
 
 Images also have a footnote style syntax:
 <!-- Here is how you define the footnote variable -->
@@ -185,19 +197,6 @@ Images also have a footnote style syntax:
 <!-- Here is how you use it -->
 ![this-image-used-footnote-style][image-link]
 
-
-### [Footnotes]
-
-This will contain a reference in the footnotes[^foot-first].  
-Click on the tiny number to see it[^foot-second].
-
-Another line can refer to the same footnote[^foot-second].
-
-<!-- Here is how you define the footnotes -->
-[^foot-first]: Footnote **can have markup** goodness too  
-    and multiple paragraphs.
-
-[^foot-second]: Click on the tiny arrow to go to the main text.
 
 
 ### Some other syntax
