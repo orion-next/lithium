@@ -21,9 +21,10 @@
         <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
     {{- end -}}
 
+    </section>
+    
     <!-- Pagination -->
     {{- partial "common/pagination.html" . -}}
-    </section>
 
     <!-- Show widgets (if enabled) -->
     {{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}

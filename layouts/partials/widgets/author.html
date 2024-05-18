@@ -2,7 +2,7 @@
     <a href="{{- $.Site.BaseURL | relLangURL -}}">
         <header class="d:flex flex:col gap:1.25em">
             {{- with .Site.Params.Meta.Avatar -}}
-            <figure class="w:120px h:120px">
+            <figure>
                 {{- $image := resources.Get . -}}
                 {{- if $image -}}
                     {{- $image := $image.Resize "300x" -}}
@@ -13,9 +13,9 @@
             </figure>
             {{- end -}}
 
-            <section class="d:flex flex:col gap:0.5em">
+            <section class="content">
                 <h4>{{- T "Site.Author" -}}</h4>
-                <p class="f:0.9em secondary">{{- T "Site.Punchline" -}}</p>
+                <p class="secondary">{{- T "Site.Punchline" -}}</p>
             </section>
         </header>
     </a>

@@ -1,8 +1,12 @@
 .articles {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 2em;
 
     article {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
         color: var(--text-color);
         background-color: var(--background-secondary-color);
         border-radius: 1em;
@@ -15,11 +19,24 @@
             transition: all var(--transition-duration) ease;
         }
 
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+
         .article-details {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5em;
+            gap: 1.25em;
+        }
+
+        .article-header {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 1.5em;
             gap: 1.25em;
         }
 
@@ -69,9 +86,9 @@
 
 .pagination {
     --icon-size: 2em;
-
+    
+    width: 100%;
     color: var(--text-color);
-    grid-column: span 3 / span 3;
 
     display: flex;
     align-items: center;
@@ -91,12 +108,16 @@
 
 @media (min-width: $breakpoint-md) {
     .articles {
-        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        article {
+            flex-basis: 45%;
+        }
     }
 }
 
 @media (min-width: $breakpoint-lg) {
     .articles {
-        grid-template-columns: repeat(3, minmax(0px, 1fr));
+        article {
+            flex-basis: 30%;
+        }
     }
 }

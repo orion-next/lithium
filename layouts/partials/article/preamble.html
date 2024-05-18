@@ -1,5 +1,5 @@
-<header href="{{- .RelPermalink -}}">
-    <section class="article-details">
+<section class="article-details">
+    <div class="article-header">
         {{- if .Params.Tags -}}
         <section class="article-tags">
             {{- range (.GetTerms "Tags") -}}
@@ -8,33 +8,33 @@
         </section>
         {{- end -}}
 
-        <section>
+        <section class="article-preview">
             <h4 class="mb:0.5em default">{{- .Title -}}</h4>
             <p class="secondary">{{- .Description -}}</p>
         </section>
+    </div>
 
-        {{- $ShowReadingTime := default true .Params.Display.ReadingTime -}}
-        {{- $ShowArticleDate := and (not .Date.IsZero) (default true .Params.Display.Date) -}}
-        {{- if or $ShowReadingTime $ShowArticleDate -}}
-        <section class="article-footer">
-            {{- if $ShowArticleDate -}}
-            <span>
-                <i>{{- partial "utilities/icon.html" "calendar.svg" -}}</i>
-                <time>
-                    {{- .Date.Format .Site.Params.Articles.DateFormat -}}
-                </time>
-            </span>
-            {{- end -}}
-
-            {{- if $ShowReadingTime -}}
-            <span>
-                <time>
-                    {{- T "Articles.ReadTime" .ReadingTime -}}
-                </time>
-                <i>{{- partial "utilities/icon.html" "clock.svg" -}}</i>
-            </span>
-            {{- end -}}
-        </section>
+    {{- $ShowReadingTime := default true .Params.Display.ReadingTime -}}
+    {{- $ShowArticleDate := and (not .Date.IsZero) (default true .Params.Display.Date) -}}
+    {{- if or $ShowReadingTime $ShowArticleDate -}}
+    <div class="article-footer">
+        {{- if $ShowArticleDate -}}
+        <span>
+            <i>{{- partial "utilities/icon.html" "calendar.svg" -}}</i>
+            <time>
+                {{- .Date.Format .Site.Params.Articles.DateFormat -}}
+            </time>
+        </span>
         {{- end -}}
-    </section>
-</header>
+
+        {{- if $ShowReadingTime -}}
+        <span>
+            <time>
+                {{- T "Articles.ReadTime" .ReadingTime -}}
+            </time>
+            <i>{{- partial "utilities/icon.html" "clock.svg" -}}</i>
+        </span>
+        {{- end -}}
+    </div>
+    {{- end -}}
+</section>

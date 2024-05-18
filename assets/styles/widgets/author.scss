@@ -5,7 +5,7 @@
 .widget.author {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
 
     align-items: center;
     justify-content: center;
@@ -14,10 +14,21 @@
     header {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 1.5em;
 
         align-items: center;
         justify-content: center;
+
+        figure {
+            width: 150px;
+            height: 150px;
+        }
+
+        section.content {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
     }
 }
 
