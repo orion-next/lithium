@@ -1,12 +1,9 @@
 {{- define "main" -}}
-<main>
-    <!-- Show author (if enabled) -->
+<main class="container article">
     {{- if default true .Params.Widgets.Author -}}
         {{- partial "widgets/author.html" . -}}
     {{- end -}}
 
-    <article class="markdown">
-        {{- .Content -}}
-    </article>
+    {{- partial "article/content.html" . -}}
 </main>
 {{- end -}}

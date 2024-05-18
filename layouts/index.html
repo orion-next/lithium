@@ -8,19 +8,16 @@
     <!-- Show articles list -->
     {{ $content := partial "utilities/articles-list.html" . }}
 
-    <section class="articles">
+    <section class="article list">
     {{- if $content -}}
         {{- range $index, $element := $content.Pagination.Pages -}}
-            <article>
-                <a href="{{- .RelPermalink -}}">
-                    {{- partial "article/preamble.html" . -}}
-                </a>
-            </article>
+            <a class="article preamble" href="{{- .RelPermalink -}}">
+                {{- partial "article/preamble.html" . -}}
+            </a>
         {{- end -}}
     {{- else -}}
         <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
     {{- end -}}
-
     </section>
     
     <!-- Pagination -->

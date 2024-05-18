@@ -1,23 +1,21 @@
-<section class="article-details">
-    <div class="article-header">
-        {{- if .Params.Tags -}}
-        <section class="article-tags">
-            {{- range (.GetTerms "Tags") -}}
-            <span class="tag" href="{{- .RelPermalink -}}">{{- .LinkTitle -}}</span>
-            {{- end -}}
-        </section>
+<section class="article details">
+    {{- if .Params.Tags -}}
+    <section class="article tags">
+        {{- range (.GetTerms "Tags") -}}
+        <span class="tag">{{- .LinkTitle -}}</span>
         {{- end -}}
+    </section>
+    {{- end -}}
 
-        <section class="article-preview">
-            <h4 class="mb:0.5em default">{{- .Title -}}</h4>
-            <p class="secondary">{{- .Description -}}</p>
-        </section>
-    </div>
+    <section class="article preview">
+        <h4 class="mb:0.5em default">{{- .Title -}}</h4>
+        <p class="secondary">{{- .Description -}}</p>
+    </section>
 
     {{- $ShowReadingTime := default true .Params.Display.ReadingTime -}}
     {{- $ShowArticleDate := and (not .Date.IsZero) (default true .Params.Display.Date) -}}
     {{- if or $ShowReadingTime $ShowArticleDate -}}
-    <div class="article-footer">
+    <div class="article footer">
         {{- if $ShowArticleDate -}}
         <span>
             <i>{{- partial "utilities/icon.html" "calendar.svg" -}}</i>
