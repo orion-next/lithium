@@ -1,0 +1,19 @@
+{
+  "name": "orion.next.lithium",
+  "version": "1.0.0",
+  "description": "Professional blog theme designed for creators and individuals",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orion-next/lithium.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "orion-next",
+    "lithium"
+  ],
+  "author": "Vidush H. Namah",
+  "devDependencies": {
+    "firebase-tools": "^13.7.5"
+  }
+}
