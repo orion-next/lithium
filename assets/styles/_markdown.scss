@@ -95,6 +95,10 @@
         text-decoration: underline;
     }
 
+    p {
+        font-size: 1.15em;
+    }
+
     ul,
     ol {
         padding: 0;
@@ -103,15 +107,16 @@
 
     ul {
         list-style: disc;
-        margin-left: 1.25em;
+        margin-left: 2.5em;
     }
 
     ol {
-        margin-left: 1em;
+        margin-left: 2em;
     }
 
     li {
         line-height: 24px;
+        margin-bottom: .5em;
     }
 
     li ul {
@@ -121,12 +126,6 @@
 
     li ul li ul {
         list-style-type: circle;
-    }
-
-    p,
-    ul,
-    ol {
-        font-size: 1em;
     }
 
     pre,
