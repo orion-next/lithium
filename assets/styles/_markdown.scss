@@ -133,19 +133,33 @@
         font-size: 14px;
         background: var(--md-blockquote-bg-color) !important;
         padding: 0.4em;
+
+        text-wrap: wrap;
+        word-wrap: break-word;
     }
 
     .highlight {
         margin-bottom: 1em;
         border-radius: 0.75em;
-        overflow: hidden;
+        overflow-x: scroll;
+        
+        &::-webkit-scrollbar  {
+            background-color: transparent;
+            height: 6px;
+        }
+    
+        &::-webkit-scrollbar-thumb  {
+            background: hsla(0,0,25%, 0.25);
+        }
 
         pre {
             padding: 1em;
+            text-wrap: nowrap;
         }
 
         code {
             padding: 0;
+            text-wrap: nowrap;
         }
     }
 
@@ -157,6 +171,12 @@
         td, th {
             padding: 0.5em;
             border: 1px solid #424555AA;
+            text-wrap: balance;
+            word-break: break-word;
+
+            code {
+                text-wrap: nowrap;
+            }
         }
 
         thead th {

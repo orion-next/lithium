@@ -54,11 +54,11 @@ So now we can provide a Lottie file to SkiaSharp, which will draw images and ani
 This project is a simple one, aiming to add Lottie animations to a page in a .NET MAUI application.
 
 ### Ingredients
-| Requirement | Type | Reference | Version |
-|-|-|-|-|
-|.NET 7.0+ | Framework | https://dotnet.microsoft.com/en-us/download/dotnet/7.0 | 7.0.100 |
-|.NET MAUI | SDK | https://dotnet.microsoft.com/en-us/apps/maui | - |
-| SkiaSharp.Extended.UI.MAUI | NuGet Package | https://mono.github.io/SkiaSharp.Extended/index.html | 2.0.0-preview.86 |
+| Requirement | Reference | Version |
+|-|-|-|
+|.NET 7.0+ | https://dotnet.microsoft.com/en-us/download/dotnet/7.0 | 7.0.100 |
+|.NET MAUI | https://dotnet.microsoft.com/en-us/apps/maui | - |
+| SkiaSharp.Extended.UI.MAUI | https://mono.github.io/SkiaSharp.Extended/index.html | 2.0.0-preview.86 |
 
 ### Instructions
 > Make sure you installed the `SkiaSharp.Extended.UI.MAUI` NuGet package to your application
