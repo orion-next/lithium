@@ -8,8 +8,7 @@ description: Sample article showcasing basic Markdown syntax and formatting for 
 
 image: https://source.unsplash.com/random?abstract&1
 
-tags:
-  - template
+series: Sample
 
 display:
   readingtime: true

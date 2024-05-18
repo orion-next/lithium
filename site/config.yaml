@@ -87,3 +87,6 @@ markup:
       tabWidth: 4
       lineNoStart: 1
       lineNos: true
+
+taxonomies:
+  series: series

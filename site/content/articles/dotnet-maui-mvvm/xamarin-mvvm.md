@@ -6,10 +6,7 @@ draft: false
 
 description: Introduction to the MVVM Pattern in Xamarin covering the project structure, data binding and changes to property values.
 
-series: .NET MAUI
-
-tags:
-    - Mobile Development
+series: Development
 ---
 This tutorial requires a basic knowledge of C# and Xamarin. Some practice in UI design using XAML and Xamarin Forms is also recommended.
 

@@ -33,34 +33,39 @@ a.article.preamble {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 1.5em;
-    padding: 1.5em;
+    gap: 1em;
+    padding: 1.75em;
 
     .article.tags {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5em;
-        
+
         .tag {
             display: inline-block;
             text-decoration: none !important;
 
-            padding: 0.65em 0.75em;
-            border-radius: 0.5em;
-
             line-height: 1;
             font-size: var(--text-size-sm);
-            color: var(--text-color);
+            color: var(--text-muted-color);
+            font-weight: bold;
 
-            background-color: #343f53;
             text-transform: uppercase;
             transition: all var(--transition-duration) ease;
+        }
+        
+        a.tag {
+            padding: 0.65em 0.75em;
+            border-radius: 0.5em;
+            color: var(--text-color);
+            font-weight: normal;
+            background-color: #343f53;
 
             &:hover {
                 opacity: 0.8;
             }
         
-            &:active {
+            &a:active {
                 opacity: 0.5;
                 transform: scale(0.98);
             }
@@ -140,7 +145,7 @@ a.article.preamble {
     display: flex;
     align-items: center;
 
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
 
     line-height: 1;
     font-size: var(--text-size-sm);

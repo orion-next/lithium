@@ -5,10 +5,7 @@ date: 2000-01-01
 
 description: Lorem est tota propiore conpellat pectoribus de pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt.
 
-tags: [
-    markdown,
-    text,
-]
+series: Sample
 
 image: https://source.unsplash.com/random?technology&3
 ---

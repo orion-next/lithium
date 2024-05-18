@@ -1,7 +1,7 @@
 <section class="article details">
-    {{- if .Params.Tags -}}
+    {{- if .Params.series -}}
     <section class="article tags">
-        {{- range (.GetTerms "Tags") -}}
+        {{- range (.GetTerms "series") -}}
         <span class="tag">{{- .LinkTitle -}}</span>
         {{- end -}}
     </section>

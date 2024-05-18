@@ -9,7 +9,7 @@ description: A summary of my thoughts around microservices and monolithic archit
 
 image: https://images.unsplash.com/photo-1511818966892-d7d671e672a2
 
-series: Community
+series: Architecture
 
 tags:
     - microservices

@@ -10,10 +10,7 @@ description : A sample blog post to serve as a template for adding youtube video
 image: https://i3.ytimg.com/vi/X2huNCHDwMQ/maxresdefault.jpg
 youtube: X2huNCHDwMQ
 
-tags : [
-    shortcodes,
-    youtube,
-]
+series: Sample
 ---
 {{< youtube NzlTuDX7veY >}}
 

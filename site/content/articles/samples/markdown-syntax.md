@@ -5,13 +5,7 @@ date: 2000-01-01
 
 description: This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
-tags: [
-    markdown,
-    css,
-    html,
-]
-
-series: ["Themes Guide"]
+series: Sample
 
 image: https://source.unsplash.com/random?technology&2
 ---
