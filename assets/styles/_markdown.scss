@@ -1,6 +1,12 @@
+@media (min-width: $breakpoint-md) {
+    .markdown {
+        padding: 2em;
+    }
+}
+
 .markdown {
     --md-background-color: #33374650;
-    --md-color: #EEE;
+    --md-color: #C3C6CF;
     --md-color-light: #CCC;
 
     --md-blockquote-cite-color: #BFBFBF;
@@ -11,12 +17,16 @@
     --md-hyperlink-accent-color: #466B6C;
 
     --md-line-color: #333746AB;
+    --md-accent-color: #EDC84C90;
 
     background: var(--md-background-color);
     color: var(--md-color);
-    padding: 4em;
+    padding: 2em;
     border-radius: 1em;
     width: 100%;
+    text-wrap: wrap;
+    word-break: break-all;
+    max-width: var(--article-max-width);
 
     h1,
     h2,
@@ -47,10 +57,6 @@
 
     p:not(:last-child) {
         margin-bottom: 12px;
-    }
-
-    p {
-        line-height: 2;
     }
 
     h1 {
@@ -87,10 +93,6 @@
 
     a:hover {
         text-decoration: underline;
-    }
-
-    a:visited {
-        color: var(--md-hyperlink-accent-color);
     }
 
     ul,
@@ -221,21 +223,44 @@
 
     blockquote {
         color: var(--md-blockquote-color);
+        
+        cite {
+            font-size: 14px;
+            font-style: normal;
+            text-transform: uppercase;
+
+            a.source {
+                display: block;
+                margin-top: .15em;
+                text-decoration: none;
+                transition: all var(--transition-duration) ease;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            
+                &a:active {
+                    opacity: 0.5;
+                    transform: scale(0.98);
+                }
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                border-top: 3px solid var(--md-accent-color);
+                margin: 1em 0 0.75em;
+                width: 1.5em;
+            }
+        }
     }
 
-    blockquote cite {
-        font-size: 14px;
-        line-height: 20px;
-        color: var(--md-blockquote-cite-color);
-    }
-
-    blockquote cite:before {
-        content: '\2014 \00A0';
-    }
+    // blockquote cite:before {
+    //     content: '\2014 \00A0';
+    // }
 
     blockquote p {
         color: var(--md-blockquote-color);
-        max-width: 460px;
     }
 
     hr {

@@ -5,6 +5,7 @@ Site:
 Articles:
   ReadTime: "{{ .Count }} MIN READ"
   BackButtonLabel: "BACK"
+  RelatedContent: "Related Content"
 
 Footer:
   Message: "Vidush H. Namah"

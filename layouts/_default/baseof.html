@@ -7,7 +7,14 @@
     </head>
 
     <body>
+        <main class="container">
+        <!-- Show author (if enabled) -->
+        {{- if default true .Params.Widgets.Author -}}
+            {{- partial "widgets/author.html" . -}}
+        {{- end -}}
+
         {{- block "main" . -}}{{- end -}}
+        </main>
 
         {{- partial "common/footer.html" . -}}
     </body>

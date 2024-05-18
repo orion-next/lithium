@@ -69,7 +69,7 @@ related:
   threshold: 60
   toLower: false
   indices:
-    - name: tags
+    - name: series
       weight: 100
 
 markup:
@@ -87,6 +87,9 @@ markup:
       tabWidth: 4
       lineNoStart: 1
       lineNos: true
+
+youtube:
+  privacyEnhanced: true
 
 taxonomies:
   series: series

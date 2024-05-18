@@ -1,34 +1,34 @@
 {{- define "main" -}}
-<main class="container">
-    <!-- Show author (if enabled) -->
-    {{- if default true .Params.Widgets.Author -}}
-        {{- partial "widgets/author.html" . -}}
-    {{- end -}}
+<!-- Show articles list -->
+{{ $content := partial "utilities/articles-list.html" . }}
 
-    <!-- Show articles list -->
-    {{ $content := partial "utilities/articles-list.html" . }}
-
-    <section class="article list">
-    {{- if $content -}}
-        {{- range $index, $element := $content.Pagination.Pages -}}
-            <a class="article preamble" href="{{- .RelPermalink -}}">
-                {{- partial "article/preamble.html" . -}}
-            </a>
-        {{- end -}}
-    {{- else -}}
-        <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
+<section class="article list">
+{{- if $content -}}
+    {{- range $content.Pagination.Pages -}}
+        <a class="article card" href="{{- .RelPermalink -}}">
+            {{- if .Params.series -}}
+            <section class="article tags">
+                {{- range (.GetTerms "series") -}}
+                    <span class="tag" data-tag="{{ $.IsPage }}">{{- .LinkTitle -}}</span>
+                {{- end -}}
+            </section>
+            {{- end -}}
+            {{- partial "article/header.html" . -}}
+        </a>
     {{- end -}}
-    </section>
-    
-    <!-- Pagination -->
-    {{- partial "common/pagination.html" . -}}
+{{- else -}}
+    <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
+{{- end -}}
+</section>
 
-    <!-- Show widgets (if enabled) -->
-    {{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
-    <aside class="aside">
-        {{- partial "widgets/search.html" . -}}
-        {{- partial "widgets/tags.html" . -}}
-    </aside>
-    {{- end -}}
-</main>
+<!-- Pagination -->
+{{- partial "common/pagination.html" . -}}
+
+<!-- Show widgets (if enabled) -->
+{{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
+<aside class="aside">
+    {{- partial "widgets/search.html" . -}}
+    {{- partial "widgets/tags.html" . -}}
+</aside>
+{{- end -}}
 {{- end -}}

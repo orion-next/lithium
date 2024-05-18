@@ -1,9 +1,25 @@
 {{- define "main" -}}
-<main class="container article">
-    {{- if default true .Params.Widgets.Author -}}
-        {{- partial "widgets/author.html" . -}}
-    {{- end -}}
+<article class="markdown">
+    <div>
+        <button class="btn back" onclick="window.history.back()">
+            <span class="icon">{{- partial "utilities/icon.html" "arrow-left.svg" -}}</span>
+            {{- T "Articles.BackButtonLabel" -}}
+        </button>
+    </div>
 
-    {{- partial "article/content.html" . -}}
-</main>
+    {{- if .Params.series -}}
+    <section class="article tags">
+        {{- range (.GetTerms "series") -}}
+            <a class="tag" href="{{- .RelPermalink -}}">{{- .LinkTitle -}}</a>
+        {{- end -}}
+    </section>
+    {{- end -}}
+    {{- partial "article/header.html" . -}}
+
+    <section class="content">
+        {{- .Content -}}
+    </section>
+</article>
+
+{{- partial "article/footer.html" . -}}
 {{- end -}}

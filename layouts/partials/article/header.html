@@ -1,12 +1,4 @@
-<section class="article details">
-    {{- if .Params.series -}}
-    <section class="article tags">
-        {{- range (.GetTerms "series") -}}
-        <span class="tag">{{- .LinkTitle -}}</span>
-        {{- end -}}
-    </section>
-    {{- end -}}
-
+<section class="article header">
     <section class="article preview">
         <h4 class="mb:0.5em default">{{- .Title -}}</h4>
         <p class="secondary">{{- .Description -}}</p>

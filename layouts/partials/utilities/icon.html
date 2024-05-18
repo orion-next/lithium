@@ -1,5 +1,3 @@
-{{ warnf "[Fetch/Icon] %s" . }}
-
 {{- $icon := resources.GetMatch (printf "icons/%s" .) -}}
 {{- if $icon -}}
     {{- $icon.Content | safeHTML -}}
