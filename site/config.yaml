@@ -55,6 +55,12 @@ params:
       url: https://instagram.com/vnsnippets
       icon: instagram.svg
 
+    - id: photography
+      name: Photography
+      url: /photography
+      icon: camera.svg
+      target: self
+
     - id: about
       name: About
       url: /about

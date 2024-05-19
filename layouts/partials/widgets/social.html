@@ -8,7 +8,7 @@
         <li>
             <a class="social {{ .id }}" href="{{- .url -}}" target="_{{- $target -}}" title="{{- .name -}}">
                 {{- with .icon -}}
-                {{- $icon := printf "/social/%s" . -}}
+                {{- $icon := printf "/navigation/%s" . -}}
                 {{- partial "utilities/icon.html" $icon -}}
                 {{- end -}}
             </a>

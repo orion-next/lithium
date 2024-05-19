@@ -1,0 +1,42 @@
+.gallery {
+    display: block;
+    columns: 14em;
+    gap: 1rem;
+    padding: 1em;
+
+    img {
+        width: 100%;
+        display: block;
+        border-radius: 1em;
+    }
+
+    figure {
+        position: relative;
+        margin-bottom: 1em;
+        border-radius: 1em;
+        break-inside: avoid;
+    }
+}
+
+// @media (min-width: $breakpoint-sm) {
+//     .gallery {
+//         columns: 14em;
+
+//         figcaption {
+//             display: block;
+//         }
+//     }
+// }
+
+// @media (min-width: $breakpoint-md) {
+//     .gallery {
+//         columns: 18em;
+//     }
+// }
+
+// @media (min-width: $breakpoint-md) {
+//     figcaption {
+//         display: block;
+
+//     }
+// }

@@ -1,3 +1,4 @@
+$breakpoint-sm: 500px;
 $breakpoint-md: 700px;
 $breakpoint-lg: 1024px;
 
@@ -8,6 +9,7 @@ $breakpoint-lg: 1024px;
 
 @import "./widgets/author.scss";
 @import "./widgets/social.scss";
+@import "./widgets/gallery.scss";
 
 :root {
     --global-gap: 2em;

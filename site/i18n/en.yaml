@@ -7,6 +7,9 @@ Articles:
   BackButtonLabel: "BACK"
   RelatedContent: "Related Content"
 
+Gallery:
+  Title: "GALLERY"
+
 Footer:
   Message: "Vidush H. Namah"
 
