@@ -6,8 +6,6 @@ date: 2000-01-01
 description: Lorem est tota propiore conpellat pectoribus de pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt.
 
 series: Sample
-
-image: https://source.unsplash.com/random?technology&3
 ---
 
 Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.

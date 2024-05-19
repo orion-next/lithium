@@ -7,8 +7,6 @@ draft: false
 
 description: Tutorial on how to use Lottie Animations in a .NET MAUI Project (Topic of MSCC Meetup 2024/01)
 
-image: https://images.unsplash.com/photo-1628494391268-c9935bc384d5
-
 series: Development
 
 tags:

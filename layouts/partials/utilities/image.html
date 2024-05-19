@@ -10,11 +10,12 @@
         {{- $permalink = $imageReference -}}
     {{- else -}}
         <!-- Image is within project -->
-        {{- $resource = .Context.Resources.GetMatch (printf "%s" ($imageReference | safeURL)) -}}
+        {{- $imageWildCard := printf "%s" $imageReference -}}
+        {{- $resource := resources.GetMatch $imageWildCard -}}
 
         {{- if $resource -}}
             <!-- Image is in Assets -->
-            {{- $permalink = $resource .RelPermalink -}}
+            {{- $permalink = $resource.RelPermalink -}}
         {{- else -}}
             <!-- Image Reference is a relative link -->
             {{- $permalink = relURL $imageReference -}}

@@ -97,3 +97,34 @@ svg {
         border-radius: 1em;
     }
 }
+
+.btn.back {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    line-height: 1;
+    font-size: var(--text-size-sm);
+    color: var(--text-secondary-color);
+
+    // background-color: var(--background-accent-color);
+    text-transform: uppercase;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.5;
+        transform: scale(0.98);
+    }
+
+    .icon {
+        margin-right: 0.25em;
+    }
+}
+
+.toolbar {
+    width: 100%;
+    padding: 0 1em;
+}

@@ -6,8 +6,6 @@ draft: false
 
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 
-image: https://source.unsplash.com/random?abstract&1
-
 series: Sample
 
 display:

@@ -1,4 +1,7 @@
 {{- define "main" -}}
+
+{{- partial "widgets/header.html" . -}}
+
 <article class="markdown">
     <div>
         <button class="btn back" onclick="window.history.back()">
@@ -6,15 +9,6 @@
             {{- T "Articles.BackButtonLabel" -}}
         </button>
     </div>
-
-    {{- if .Params.series -}}
-    <section class="article tags">
-        {{- range (.GetTerms "series") -}}
-            <a class="tag" href="{{- .RelPermalink -}}">{{- .LinkTitle -}}</a>
-        {{- end -}}
-    </section>
-    {{- end -}}
-    {{- partial "article/header.html" . -}}
 
     <section class="content">
         {{- .Content -}}

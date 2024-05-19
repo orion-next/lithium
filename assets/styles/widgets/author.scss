@@ -1,11 +1,9 @@
 
-.widget.author {
+.widget.header {
     display: flex;
     flex-direction: column;
     padding: 2em;
     gap: 2em;
-
-    margin-top: 1em;
 
     align-items: center;
     justify-content: center;
@@ -33,8 +31,11 @@
 }
 
 @media (min-width: $breakpoint-md) {
-    .widget.author {
+    .widget.header {
         max-width: 40em;
-        margin-top: 5em;
+
+        figure {
+            margin-top: 4em;
+        }
     }
 }

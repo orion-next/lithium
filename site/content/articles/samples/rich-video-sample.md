@@ -7,7 +7,6 @@ draft: false
 
 description : A sample blog post to serve as a template for adding youtube video to articles
 
-image: https://i3.ytimg.com/vi/X2huNCHDwMQ/maxresdefault.jpg
 youtube: X2huNCHDwMQ
 
 series: Sample

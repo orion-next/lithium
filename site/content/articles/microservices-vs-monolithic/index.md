@@ -7,8 +7,6 @@ draft: false
 
 description: A summary of my thoughts around microservices and monolithic architectures following the Monthly MSCC Meetup of August 2023.
 
-image: https://images.unsplash.com/photo-1511818966892-d7d671e672a2
-
 series: Architecture
 
 tags:

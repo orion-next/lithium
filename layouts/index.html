@@ -1,5 +1,8 @@
 {{- define "main" -}}
-<!-- Show articles list -->
+
+<!-- Show author (if enabled) -->
+{{- partial "widgets/header.html" . -}}
+
 {{ $content := partial "utilities/articles-list.html" . }}
 
 <section class="article list">
