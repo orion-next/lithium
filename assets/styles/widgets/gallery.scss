@@ -1,42 +1,88 @@
 .gallery {
-    display: block;
-    columns: 14em;
-    gap: 1rem;
+    margin: 0;
     padding: 1em;
+    columns: 3;
+    column-gap: 1em;
 
-    img {
-        width: 100%;
+    .item {
         display: block;
-        border-radius: 1em;
-    }
-
-    figure {
         position: relative;
         margin-bottom: 1em;
         border-radius: 1em;
-        break-inside: avoid;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        .caption {
+            color: var(--text-color);
+            // position: absolute;
+            // bottom: 0;
+            z-index: 1;
+            padding: 1.25em;
+            // background: linear-gradient(0deg, #000 0%, #00000050 90%, transparent 100%);
+            background-color: var(--background-secondary-color);
+            
+            p {
+                font-size: var(--text-size-sm);
+                line-height: 1.5;
+            }
+        }
     }
 }
 
-// @media (min-width: $breakpoint-sm) {
+// @media (max-width: 1200px) {
 //     .gallery {
-//         columns: 14em;
-
-//         figcaption {
-//             display: block;
-//         }
+//         columns: 3;
 //     }
 // }
 
-// @media (min-width: $breakpoint-md) {
-//     .gallery {
-//         columns: 18em;
-//     }
-// }
+@media (max-width: $breakpoint-sm) {
+    .gallery {
+        columns: 2;
+    }
+}
 
-// @media (min-width: $breakpoint-md) {
-//     figcaption {
-//         display: block;
+    // .gallery {
+    //     display: block;
+    //     columns: 14em;
+    //     gap: 1rem;
+    //     padding: 1em;
 
-//     }
-// }
+    //     img {
+    //         width: 100%;
+    //         display: block;
+    //         border-radius: 1em;
+    //     }
+
+    //     figure {
+    //         position: relative;
+    //         margin-bottom: 1em;
+    //         border-radius: 1em;
+    //         break-inside: avoid;
+    //     }
+    // }
+
+    // @media (min-width: $breakpoint-sm) {
+    //     .gallery {
+    //         columns: 14em;
+
+    //         figcaption {
+    //             display: block;
+    //         }
+    //     }
+    // }
+
+    // @media (min-width: $breakpoint-md) {
+    //     .gallery {
+    //         columns: 18em;
+    //     }
+    // }
+
+    // @media (min-width: $breakpoint-md) {
+    //     figcaption {
+    //         display: block;
+
+    //     }
+    // }

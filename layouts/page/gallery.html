@@ -4,11 +4,15 @@
 <section class="gallery">
 
     {{- range .Params.content -}}
-    <figure>
-        <!-- <figcaption>Source: {{ . -}}</figcaption> -->
-        {{- $permalink := partial "utilities/image.html" . -}}
-        <img src="{{- $permalink -}}" />
-    </figure>
+    {{- $permalink := partial "utilities/image.html" .url -}}
+    <figure class="item">
+        <img src="{{- $permalink -}}">
+        {{- with .caption -}}
+        <figcaption class="caption">
+            <p>{{- . -}}</p>
+        </figcaption>
+        {{- end -}}
+      </figure>
     {{- end -}}
 </section>
 {{- end -}}
