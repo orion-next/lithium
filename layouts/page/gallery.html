@@ -10,17 +10,16 @@
 </div>
 
 <section class="gallery">
-
     {{- range .Params.content -}}
     {{- $permalink := partial "utilities/image.html" .url -}}
     <figure class="item">
-        <img src="{{- $permalink -}}">
+        <img src="{{- $permalink -}}" />
         {{- with .caption -}}
         <figcaption class="caption">
             <p>{{- . -}}</p>
         </figcaption>
         {{- end -}}
-      </figure>
+    </figure>
     {{- end -}}
 </section>
 {{- end -}}

@@ -5,8 +5,6 @@
     column-gap: 1em;
 
     .item {
-        display: block;
-        position: relative;
         margin-bottom: 1em;
         border-radius: 1em;
         overflow: hidden;
@@ -40,7 +38,7 @@
 
 @media (max-width: $breakpoint-sm) {
     .gallery {
-        columns: 2;
+        columns: 3;
     }
 }
 

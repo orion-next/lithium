@@ -5,24 +5,24 @@ description: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 layout: gallery
 
 content:
-  - url: IMG_0049.jpg
-  - url: IMG_0396.jpg
-  - url: IMG_0614.jpg
-  - url: IMG_3817.jpg
-  - url: IMG_4306.jpg
-  - url: IMG_4471.jpg
-  - url: IMG_4558.jpg
-  - url: IMG_4597.jpg
-  - url: IMG_4665.jpg
-  - url: IMG_4962.jpg
-  - url: IMG_5018.jpg
-  - url: IMG_5027.jpg
-  - url: IMG_5926.jpg
-  - url: IMG_5936.jpg
-  - url: IMG_6499.jpg
-  - url: IMG_6601.jpg
-  - url: IMG_6669.jpg
-  - url: IMG_7399.jpg
-  - url: IMG_7408.jpg
-  - url: IMG_7774.jpg
+  - url: photography/IMG_0049.jpeg
+  - url: photography/IMG_0396.jpeg
+  - url: photography/IMG_0614.jpeg
+  - url: photography/IMG_3817.jpeg
+  - url: photography/IMG_4306.jpeg
+  - url: photography/IMG_4471.jpeg
+  - url: photography/IMG_4558.jpeg
+  - url: photography/IMG_4597.jpeg
+  - url: photography/IMG_4665.jpeg
+  - url: photography/IMG_4962.jpeg
+  - url: photography/IMG_5018.jpeg
+  - url: photography/IMG_5027.jpeg
+  - url: photography/IMG_5926.jpeg
+  - url: photography/IMG_5936.jpeg
+  - url: photography/IMG_6499.jpeg
+  - url: photography/IMG_6601.jpeg
+  - url: photography/IMG_6669.jpeg
+  - url: photography/IMG_7399.jpeg
+  - url: photography/IMG_7408.jpeg
+  - url: photography/IMG_7774.jpeg
 ---
