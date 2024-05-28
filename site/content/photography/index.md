@@ -18,7 +18,7 @@ content:
   - url: photography/IMG_5018.jpeg
   - url: photography/IMG_5027.jpeg
   - url: photography/IMG_5926.jpeg
-  - url: photography/IMG_6499.jpeg
+  - url: photography/IMG_6499.JPG
   - url: photography/IMG_6601.jpeg
   - url: photography/IMG_6669.jpeg
   - url: photography/IMG_7399.jpeg
