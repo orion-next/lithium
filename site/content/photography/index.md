@@ -5,31 +5,24 @@ description: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
 layout: gallery
 
 content:
-  - url: https://source.unsplash.com/random?abstract&1
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-  - url: https://source.unsplash.com/random?abstract&2
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&3
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&4
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&5
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&6
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&7
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&8
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
-  - url: https://source.unsplash.com/random?abstract&9
-    caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    
+  - url: IMG_0049.jpg
+  - url: IMG_0396.jpg
+  - url: IMG_0614.jpg
+  - url: IMG_3817.jpg
+  - url: IMG_4306.jpg
+  - url: IMG_4471.jpg
+  - url: IMG_4558.jpg
+  - url: IMG_4597.jpg
+  - url: IMG_4665.jpg
+  - url: IMG_4962.jpg
+  - url: IMG_5018.jpg
+  - url: IMG_5027.jpg
+  - url: IMG_5926.jpg
+  - url: IMG_5936.jpg
+  - url: IMG_6499.jpg
+  - url: IMG_6601.jpg
+  - url: IMG_6669.jpg
+  - url: IMG_7399.jpg
+  - url: IMG_7408.jpg
+  - url: IMG_7774.jpg
 ---
