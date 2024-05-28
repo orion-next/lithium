@@ -1,86 +1,104 @@
-.gallery {
-    margin: 0;
-    padding: 1em;
-    columns: 3;
-    column-gap: 1em;
+// section.gallery {
+//     margin: 0;
+//     padding: 1em;
+//     columns: 3;
+//     column-gap: 1em;
 
-    .item {
-        margin-bottom: 1em;
-        border-radius: 1em;
-        overflow: hidden;
+//     .item {
+//         margin-bottom: 1em;
+//         border-radius: 1em;
+//         overflow: hidden;
 
-        img {
-            width: 100%;
-        }
+//         img {
+//             width: 100%;
+//         }
 
-        .caption {
-            color: var(--text-color);
-            // position: absolute;
-            // bottom: 0;
-            z-index: 1;
-            padding: 1.25em;
-            // background: linear-gradient(0deg, #000 0%, #00000050 90%, transparent 100%);
-            background-color: var(--background-secondary-color);
+//         .caption {
+//             color: var(--text-color);
+//             // position: absolute;
+//             // bottom: 0;
+//             z-index: 1;
+//             padding: 1.25em;
+//             // background: linear-gradient(0deg, #000 0%, #00000050 90%, transparent 100%);
+//             background-color: var(--background-secondary-color);
             
-            p {
-                font-size: var(--text-size-sm);
-                line-height: 1.5;
-            }
-        }
-    }
-}
+//             p {
+//                 font-size: var(--text-size-sm);
+//                 line-height: 1.5;
+//             }
+//         }
+//     }
+// }
 
-// @media (max-width: 1200px) {
+// // @media (max-width: 1200px) {
+// //     .gallery {
+// //         columns: 3;
+// //     }
+// // }
+
+// @media (max-width: $breakpoint-sm) {
 //     .gallery {
 //         columns: 3;
 //     }
 // }
 
-@media (max-width: $breakpoint-sm) {
-    .gallery {
-        columns: 3;
+//     // .gallery {
+//     //     display: block;
+//     //     columns: 14em;
+//     //     gap: 1rem;
+//     //     padding: 1em;
+
+//     //     img {
+//     //         width: 100%;
+//     //         display: block;
+//     //         border-radius: 1em;
+//     //     }
+
+//     //     figure {
+//     //         position: relative;
+//     //         margin-bottom: 1em;
+//     //         border-radius: 1em;
+//     //         break-inside: avoid;
+//     //     }
+//     // }
+
+//     // @media (min-width: $breakpoint-sm) {
+//     //     .gallery {
+//     //         columns: 14em;
+
+//     //         figcaption {
+//     //             display: block;
+//     //         }
+//     //     }
+//     // }
+
+//     // @media (min-width: $breakpoint-md) {
+//     //     .gallery {
+//     //         columns: 18em;
+//     //     }
+//     // }
+
+//     // @media (min-width: $breakpoint-md) {
+//     //     figcaption {
+//     //         display: block;
+
+//     //     }
+//     // }
+
+section.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+
+    -webkit-column-gap: 0.25em;
+    -moz-column-gap: 0.25em;
+    column-gap: 0.25em;
+
+    margin: 0 0.25em;
+
+    .item {
+        margin-bottom: 0.25em;
+        border-radius: 0.25em;
+        overflow: hidden;
     }
 }
-
-    // .gallery {
-    //     display: block;
-    //     columns: 14em;
-    //     gap: 1rem;
-    //     padding: 1em;
-
-    //     img {
-    //         width: 100%;
-    //         display: block;
-    //         border-radius: 1em;
-    //     }
-
-    //     figure {
-    //         position: relative;
-    //         margin-bottom: 1em;
-    //         border-radius: 1em;
-    //         break-inside: avoid;
-    //     }
-    // }
-
-    // @media (min-width: $breakpoint-sm) {
-    //     .gallery {
-    //         columns: 14em;
-
-    //         figcaption {
-    //             display: block;
-    //         }
-    //     }
-    // }
-
-    // @media (min-width: $breakpoint-md) {
-    //     .gallery {
-    //         columns: 18em;
-    //     }
-    // }
-
-    // @media (min-width: $breakpoint-md) {
-    //     figcaption {
-    //         display: block;
-
-    //     }
-    // }

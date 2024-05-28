@@ -10,7 +10,8 @@
 </div>
 
 <section class="gallery">
-    {{- range .Params.content -}}
+    {{- $itemsList := shuffle .Params.content -}}
+    {{- range $itemsList -}}
     {{- $permalink := partial "utilities/image.html" .url -}}
     <figure class="item">
         <img src="{{- $permalink -}}" />
