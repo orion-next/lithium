@@ -6,7 +6,7 @@
     {{- partialCached "utilities/back.html" . -}}
 </div>
 
-<section class="gallery">
+<section class="gallery" data-gallery-scroll="false">
     {{- $itemsList := shuffle .Params.content -}}
     {{- range $itemsList -}}
     {{- $permalink := partial "utilities/image.html" .url -}}

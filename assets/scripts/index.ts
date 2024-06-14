@@ -34,12 +34,27 @@ const Application = {
                 }
             });
         });
+    },
+
+    AddGalleryScrollListener: () => {
+        const gallery = document.querySelector("[data-gallery-scroll]") as HTMLElement;
+
+        [...gallery.children].forEach((el: Element) => {
+            el.addEventListener('click', (evt: Event) => {
+                gallery.dataset.galleryScroll = (gallery.dataset.galleryScroll == "false") ? "true" : "false";
+                
+                // if (el.classList.contains("span"))
+                //     el.classList.remove("span");
+                // else el.classList.add("span");
+            })
+        })
     }
 }
 
 const OnApplicationLoad = () => {
     Application.InitializeColorSchemeToggle();
     Application.AddBackButtonListener();
+    Application.AddGalleryScrollListener();
 }
 
 
