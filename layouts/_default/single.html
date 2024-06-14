@@ -1,5 +1,14 @@
 {{- define "main" -}}
-<section>
-    {{- .Content -}}
-</section>
+
+{{- partial "widgets/header.html" . -}}
+
+<article class="markdown">
+    <div>{{- partialCached "utilities/back.html" . -}}</div>
+
+    <section class="content">
+        {{- .Content -}}
+    </section>
+</article>
+
+{{- partial "article/footer.html" . -}}
 {{- end -}}

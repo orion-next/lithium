@@ -1,0 +1,41 @@
+
+.widget.header {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 2em;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        align-items: center;
+        justify-content: center;
+
+        figure {
+            width: 150px;
+            height: 150px;
+        }
+
+        section.content {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .widget.header {
+        max-width: 40em;
+
+        figure {
+            margin-top: 4em;
+        }
+    }
+}

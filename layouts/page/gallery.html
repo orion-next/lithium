@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+{{- partial "widgets/header.html" . -}}
+
+<div class="toolbar">
+    {{- partialCached "utilities/back.html" . -}}
+</div>
+
+<section class="gallery" data-gallery-scroll="false">
+    {{- $itemsList := shuffle .Params.content -}}
+    {{- range $itemsList -}}
+    {{- $permalink := partial "utilities/image.html" .url -}}
+    <figure class="item">
+        <img src="{{- $permalink -}}" />
+        {{- with .caption -}}
+        <figcaption class="caption">
+            <p>{{- . -}}</p>
+        </figcaption>
+        {{- end -}}
+    </figure>
+    {{- end -}}
+</section>
+{{- end -}}

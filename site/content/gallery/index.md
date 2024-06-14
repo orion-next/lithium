@@ -1,0 +1,67 @@
+---
+title: Gallery
+description: With a passion for capturing the essence of daily life, roaming the streets with my camera in hand - capturing life's unscripted moments on an eternal canvas. Beauty is found in everyday scenes, from the streets to mountain peaks telling silent stories through the lens of modest yet mighty equipment. 
+
+layout: gallery
+
+content:
+  - url: gallery/IMG_0160.jpg
+  - url: gallery/IMG_0420.jpg
+  - url: gallery/IMG_0577.jpg
+  - url: gallery/IMG_0644.jpg
+  - url: gallery/IMG_3833.jpg
+  - url: gallery/IMG_4558.jpg
+  - url: gallery/IMG_4962.jpg
+  - url: gallery/IMG_6601.jpg
+  - url: gallery/IMG_8881.jpg
+  - url: gallery/IMG_9980.jpg
+  - url: gallery/IMG_0179.jpg
+  - url: gallery/IMG_0423.jpg
+  - url: gallery/IMG_0584.jpg
+  - url: gallery/IMG_0690.jpg
+  - url: gallery/IMG_4007.jpg
+  - url: gallery/IMG_4597.jpg
+  - url: gallery/IMG_5018.jpg
+  - url: gallery/IMG_6669.jpg
+  - url: gallery/IMG_9059.jpg
+  - url: gallery/IMG_0010.jpg
+  - url: gallery/IMG_0184.jpg
+  - url: gallery/IMG_0435.jpg
+  - url: gallery/IMG_0596.jpg
+  - url: gallery/IMG_0694.jpg
+  - url: gallery/IMG_4137.jpg
+  - url: gallery/IMG_4665.jpg
+  - url: gallery/IMG_5022.jpg
+  - url: gallery/IMG_7399.jpg
+  - url: gallery/IMG_9370.jpg
+  - url: gallery/IMG_0088.jpg
+  - url: gallery/IMG_0330.jpg
+  - url: gallery/IMG_0447.jpg
+  - url: gallery/IMG_0609.jpg
+  - url: gallery/IMG_0803.jpg
+  - url: gallery/IMG_4306.jpg
+  - url: gallery/IMG_4724.jpg
+  - url: gallery/IMG_5027.jpg
+  - url: gallery/IMG_7408.jpg
+  - url: gallery/IMG_9405.jpg
+  - url: gallery/IMG_0117.jpg
+  - url: gallery/IMG_0396.jpg
+  - url: gallery/IMG_0469.jpg
+  - url: gallery/IMG_0612.jpg
+  - url: gallery/IMG_0812.jpg
+  - url: gallery/IMG_4468.jpg
+  - url: gallery/IMG_4746.jpg
+  - url: gallery/IMG_5926.jpg
+  - url: gallery/IMG_7774.jpg
+  - url: gallery/IMG_9857.jpg
+  - url: gallery/IMG_0122.jpg
+  - url: gallery/IMG_0404.jpg
+  - url: gallery/IMG_0521.jpg
+  - url: gallery/IMG_0614.jpg
+  - url: gallery/IMG_3817.jpg
+  - url: gallery/IMG_4471.jpg
+  - url: gallery/IMG_4956.jpg
+  - url: gallery/IMG_6499.jpg
+  - url: gallery/IMG_8298.jpg
+  - url: gallery/IMG_9894.jpg
+---

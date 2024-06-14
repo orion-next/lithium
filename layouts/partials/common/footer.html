@@ -1,4 +1,4 @@
-<footer class="muted d:flex flex:col ai:end jc:end mx-auto">
+<footer class="global">
     <p>
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) -}}
             {{ .Site.Params.footer.since }} - 

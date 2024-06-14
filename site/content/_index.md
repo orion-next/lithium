@@ -1,4 +1,9 @@
 ---
+title: Vidush H. Namah
+description: With a blend of creativity and precision, I craft digital solutions that bridge the gap between imagination and reality. Away from my screens, photography is my escape — a way to freeze time, evoke emotions, and tell stories.
+
+image: /images/avatar.png
+
 widgets:
    browse: true
    author: true
@@ -10,5 +15,3 @@ menu:
       params:
          icon: house.svg
 ---
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

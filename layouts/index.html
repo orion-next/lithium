@@ -1,21 +1,37 @@
 {{- define "main" -}}
-    <!-- Show articles list -->
-    {{ $content := partial "utilities/articles-list.html" . }}
 
-    <section class="articles">
-    {{- if $content -}}
-        {{- range $index, $element := $content.Pagination.Pages -}}
-            <article class="bg-secondary default overflow:hidden r:1em">
-                <a href="{{- .RelPermalink -}}">
-                    {{- partial "article/preamble.html" . -}}
-                </a>
-            </article>
-        {{- end -}}
-    {{- else -}}
-        <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
+<!-- Show author (if enabled) -->
+{{- partial "widgets/header.html" . -}}
+
+{{ $content := partial "utilities/articles-list.html" . }}
+
+<section class="article list">
+{{- if $content -}}
+    {{- range $content.Pagination.Pages -}}
+        <a class="article card" href="{{- .RelPermalink -}}">
+            {{- if .Params.series -}}
+            <section class="article tags">
+                {{- range (.GetTerms "series") -}}
+                    <span class="tag" data-tag="{{ $.IsPage }}">{{- .LinkTitle -}}</span>
+                {{- end -}}
+            </section>
+            {{- end -}}
+            {{- partial "article/header.html" . -}}
+        </a>
     {{- end -}}
+{{- else -}}
+    <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
+{{- end -}}
+</section>
 
-    <!-- Pagination -->
-    {{- partial "common/pagination.html" . -}}
-    </section>
+<!-- Pagination -->
+{{- partial "common/pagination.html" . -}}
+
+<!-- Show widgets (if enabled) -->
+{{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
+<aside class="aside">
+    {{- partial "widgets/search.html" . -}}
+    {{- partial "widgets/tags.html" . -}}
+</aside>
+{{- end -}}
 {{- end -}}

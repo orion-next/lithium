@@ -2,22 +2,30 @@
 {{- $permalink := 0 }}
 {{- $imageReference := . -}}
 
+{{ warnf "IMAGE %s" $imageReference }}
+
 {{- if $imageReference -}}
     <!-- Check if image is from an external source -->
     {{- $imageURL := urls.Parse $imageReference -}}
     {{- if or (eq $imageURL.Scheme "http") (eq $imageURL.Scheme "https") -}}
         <!-- Image is from an external source -->
         {{- $permalink = $imageReference -}}
+        {{ warnf "IMAGE %s is a URL" $imageReference }}
     {{- else -}}
         <!-- Image is within project -->
-        {{- $resource = .Context.Resources.GetMatch (printf "%s" ($imageReference | safeURL)) -}}
+        {{- $imageWildCard := printf "%s" $imageReference -}}
+        {{- $resource := resources.GetMatch $imageWildCard -}}
+        
+        {{ warnf "IMAGE %s is Resource %s" $imageReference $resource }}
 
         {{- if $resource -}}
             <!-- Image is in Assets -->
-            {{- $permalink = $resource .RelPermalink -}}
+            {{- $permalink = $resource.RelPermalink -}}
+            {{ warnf "IMAGE %s Resource is at %s" $imageReference $resource.RelPermalink }}
         {{- else -}}
             <!-- Image Reference is a relative link -->
             {{- $permalink = relURL $imageReference -}}
+            {{ warnf "IMAGE %s is a relative URL at %s" $imageReference $permalink }}
         {{- end -}}
     {{- end -}}
 {{- end -}}

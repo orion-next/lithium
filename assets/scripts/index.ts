@@ -21,11 +21,40 @@ const Application = {
 
         const themeToggle = document.getElementById('theme-toggle');
         new ColorSchemeUtility(themeToggle);
+    },
+
+    AddBackButtonListener: () => {
+        document.querySelectorAll("[data-js-action='back']").forEach((el: Element) => {
+            el.addEventListener('click', (evt: Event) => {
+                if (document.referrer.indexOf(window.location.host) !== -1) { 
+                    evt.preventDefault();
+                    history.back();
+                } else {
+                    window.location.replace("/");
+                }
+            });
+        });
+    },
+
+    AddGalleryScrollListener: () => {
+        const gallery = document.querySelector("[data-gallery-scroll]") as HTMLElement;
+
+        [...gallery.children].forEach((el: Element) => {
+            el.addEventListener('click', (evt: Event) => {
+                gallery.dataset.galleryScroll = (gallery.dataset.galleryScroll == "false") ? "true" : "false";
+                
+                // if (el.classList.contains("span"))
+                //     el.classList.remove("span");
+                // else el.classList.add("span");
+            })
+        })
     }
 }
 
 const OnApplicationLoad = () => {
     Application.InitializeColorSchemeToggle();
+    Application.AddBackButtonListener();
+    Application.AddGalleryScrollListener();
 }
 
 
