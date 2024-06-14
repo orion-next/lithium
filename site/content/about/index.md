@@ -18,16 +18,88 @@ menu:
          icon: info.svg
 ---
 
-👋 Hello! I’m Vidush H. Namah, a passionate software engineer, architect, and tech enthusiast based in beautiful Mauritius. With a blend of creativity and precision, I craft digital solutions that bridge the gap between imagination and reality.
+{{< figure src="https://github.com/vnsnippets/vnsnippets/raw/master/assets/cover-dark-portrait.gif" width="100%" alt="Cover Animation" class="rounded" >}}
 
-🏢 Orion Next (Mauritius): As the proud owner of Orion Next, I lead a team of visionaries who turn ideas into impactful software. Our mission? To propel businesses forward by harnessing cutting-edge technology. Whether it’s elegant web applications, robust APIs, or scalable cloud solutions, we’re at the forefront of innovation.
+> THE BEST TECHNIQUES ARE PASSED ON BY THE SURVIVORS
 
-🌐 Tech Explorer: My love affair with technology knows no bounds. From algorithms that dance gracefully to the rhythm of data to architectures that stand tall like modern-day cathedrals, I revel in the art and science of code. Whether it’s a sleek UI or a backend that hums with efficiency, I’m in my element.
+#### 🔥 SKILLS UNLOCKED
+![C-Sharp][csharp] ![TypeScript][ts] ![NodeJS][nodejs] ![HTML5][html5] ![CSS3][css3] ![JavaScript][js] ![Python][python]  
+![.NET Standard][.net] ![.NET Core][.net-core]  
+![ReactJs][react] ![NextJs][nextjs] ![VueJs][vue] ![NuxtJs][nuxtjs] ![ExpressJs][express] ![Django][django]  
+![React Native][react-native] ![Xamarin Forms][xamarin] ![UWP][uwp]  
+![Bootstrap][bootstrap] ![Tailwind CSS][tailwind]  
+![Microsoft Azure][azure] ![Firebase][firebase] ![SQL Server][sqlserver] ![MongoDB][mongodb]  
+![GIT][git] ![Github][github] ![Azure DevOps][azuredevops] ![bitbucket][Bitbucket]
 
-📸 Through the Lens: When I’m not immersed in lines of code, you’ll find me chasing sunsets and capturing moments through my camera lens. Photography is my escape—a way to freeze time, evoke emotions, and tell stories. Whether it’s a bustling cityscape or a serene landscape, I seek beauty in every frame.
 
-✈️ Wanderlust and Wonder: Travel fuels my soul. I’ve wandered ancient streets in Kyoto, marveled at the Northern Lights in Iceland, and sipped chai on the ghats of Varanasi. Each journey adds a brushstroke to the canvas of my life. And sometimes, I blend my love for technology with my wanderlust—capturing the world through a digital lens.
+#### 🗡️ WEAPONS OF CHOICE
+![Microsoft Windows][windows] ![Ubuntu][ubuntu]  
+![Visual Studio][visualstudio] ![Visual Studio Code][vscode]  
+![AdobeXD][adobexd] ![Figma][figma] ![Canva][canva]
 
-🎨 Code, Clicks, and Curiosity: My days are a symphony of code snippets, shutter clicks, and curious exploration. Whether I’m optimizing an algorithm, composing a blog post, or planning my next adventure, I thrive on the intersection of logic and creativity.
 
-🌟 Join Me on this Journey: Let’s connect! Whether you’re a fellow tech enthusiast, a photography aficionado, or simply someone who appreciates the beauty of both bits and bytes, I’d love to chat. Reach out, and let’s create something remarkable together!
+#### 📚 SCROLLS OF WISDOM
+![Markdown][md] ![Gitbook][gitbook]
+
+
+<!-- LINKS -->
+<!-- Languages -->
+[csharp]: https://img.shields.io/badge/-C%23-%231d2229?style=for-the-badge&logo=c-sharp
+[ts]: https://img.shields.io/badge/-TypeScript-%231d2229?style=for-the-badge&logo=typescript
+[nodejs]: https://img.shields.io/badge/-Node.JS-%231d2229?style=for-the-badge&logo=node.js
+[html5]: https://img.shields.io/badge/-HTML-%231d2229?style=for-the-badge&logo=html5
+[css3]: https://img.shields.io/badge/-CSS3-%231d2229?style=for-the-badge&logo=css3
+[js]: https://img.shields.io/badge/-JavaScript-%231d2229?style=for-the-badge&logo=javascript
+[python]: https://img.shields.io/badge/-Python-%231d2229?style=for-the-badge&logo=python
+
+<!-- Frameworks -->
+[.net]: https://img.shields.io/badge/-.NET%20Standard-%231d2229?style=for-the-badge&logo=.net
+[.net-core]: https://img.shields.io/badge/-.NET%20Core-%231d2229?style=for-the-badge&logo=.net
+[react]: https://img.shields.io/badge/-React-%231d2229?style=for-the-badge&logo=react
+[nextjs]: https://img.shields.io/badge/-Next.JS-%231d2229?style=for-the-badge&logo=next.js
+[vue]: https://img.shields.io/badge/-Vue.JS-%231d2229?style=for-the-badge&logo=vue.js
+[nuxtjs]: https://img.shields.io/badge/-Nuxt.JS-%231d2229?style=for-the-badge&logo=nuxt.js
+[express]: https://img.shields.io/badge/-ExpressJS-%231d2229?style=for-the-badge&logo=express
+[django]: https://img.shields.io/badge/-Django-%231d2229?style=for-the-badge&logo=django
+
+<!-- Mobile and Cross-Platform -->
+[react-native]: https://img.shields.io/badge/-React%20Native-%231d2229?style=for-the-badge&logo=react
+[xamarin]: https://img.shields.io/badge/-Xamarin%20Forms-%231d2229?style=for-the-badge&logo=xamarin
+[uwp]: https://img.shields.io/badge/-UWP-%231d2229?style=for-the-badge&logo=microsoft
+
+<!-- CSS Frameworks -->
+[bootstrap]: https://img.shields.io/badge/-Bootstrap-%231d2229?style=for-the-badge&logo=bootstrap
+[tailwind]: https://img.shields.io/badge/-Tailwind%20CSS-%231d2229?style=for-the-badge&logo=tailwind-css
+
+<!-- Cloud and Infrastructure -->
+[azure]: https://img.shields.io/badge/-Microsoft%20Azure-%231d2229?style=for-the-badge&logo=microsoft-azure
+[firebase]: https://img.shields.io/badge/-Firebase-%231d2229?style=for-the-badge&logo=firebase
+[sqlserver]: https://img.shields.io/badge/-SQL%20Server-%231d2229?style=for-the-badge&logo=microsoft-sql-server
+[mongodb]: https://img.shields.io/badge/-MongoDB-%231d2229?style=for-the-badge&logo=mongodb
+
+<!-- Version Control -->
+[git]: https://img.shields.io/badge/-GIT-%231d2229?style=for-the-badge&logo=git
+[github]: https://img.shields.io/badge/-Github-%231d2229?style=for-the-badge&logo=github
+[azuredevops]: https://img.shields.io/badge/-Azure%20Devops-%231d2229?style=for-the-badge&logo=azure-devops
+[bitbucket]: https://img.shields.io/badge/-Bitbucket-%231d2229?style=for-the-badge&logo=bitbucket
+
+<!-- Operating Systems -->
+[windows]: https://img.shields.io/badge/-Windows-%231d2229?style=for-the-badge&logo=windows
+[ubuntu]: https://img.shields.io/badge/-Ubuntu-%231d2229?style=for-the-badge&logo=ubuntu
+
+<!-- IDEs -->
+[visualstudio]: https://img.shields.io/badge/-Visual%20Studio-%231d2229?style=for-the-badge&logo=visual-studio
+[vscode]: https://img.shields.io/badge/-VS%20Code-%231d2229?style=for-the-badge&logo=visual-studio-code
+
+<!-- Design Tools -->
+[adobexd]: https://img.shields.io/badge/-Adobe%20XD-%231d2229?style=for-the-badge&logo=adobe-xd
+[canva]: https://img.shields.io/badge/-Canva-%231d2229?style=for-the-badge&logo=canva
+[figma]: https://img.shields.io/badge/-FIGMA-%231d2229?style=for-the-badge&logo=figma
+
+<!-- Documentation -->
+[md]: https://img.shields.io/badge/-Markdown-%231d2229?style=for-the-badge&logo=markdown
+[gitbook]: https://img.shields.io/badge/-Gitbook-%231d2229?style=for-the-badge&logo=gitbook
+
+<!-- Social Media -->
+[twitter]: https://img.shields.io/badge/-Twitter-%23011627?style=for-the-badge&logo=twitter
+[instagram]: https://img.shields.io/badge/-Instagram-%23011627?style=for-the-badge&logo=instagram

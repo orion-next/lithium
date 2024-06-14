@@ -2,7 +2,7 @@
 author: Vidush H. Namah
 title: Sample Markdown Blog Post
 date: 2000-01-01
-draft: false
+draft: true
 
 description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 

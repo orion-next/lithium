@@ -2,6 +2,7 @@
 author: Vidush H. Namah
 title: Placeholder Text
 date: 2000-01-01
+draft: true
 
 description: Lorem est tota propiore conpellat pectoribus de pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt.
 

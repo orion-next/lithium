@@ -1,9 +1,8 @@
 ---
 author : Vidush H. Namah
 title : Sample Youtube Video Template
-
 date : 2000-01-01
-draft: false
+draft: true
 
 description : A sample blog post to serve as a template for adding youtube video to articles
 

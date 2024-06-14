@@ -260,6 +260,7 @@
 
     blockquote p {
         color: var(--md-blockquote-color);
+        font-size: 1em;
     }
 
     hr {
@@ -272,5 +273,10 @@
     figure,
     img {
         margin: 24px 0;
+
+        &.custom-img-svg {
+            display: inline-block;
+            margin: 0;
+        }
     }
 }

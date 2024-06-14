@@ -129,6 +129,11 @@
   {{- end }}
 {{- end }}
 
+{{- /* If SVG Render Immediately */}}
+{{- if eq $r.MediaType.SubType "svg" -}}
+<img src="{{ .Destination | safeURL }}" class="custom-img-svg" alt="{{ .Text }}" />
+{{- else -}}
+
 {{- /* Set image processing options. */}}
 {{- $options := slice }}
 {{- if and $width $height }}
@@ -202,3 +207,4 @@
   {{- end -}}
 >
 {{- /**/ -}}
+{{- end -}}

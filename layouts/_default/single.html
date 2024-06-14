@@ -3,12 +3,7 @@
 {{- partial "widgets/header.html" . -}}
 
 <article class="markdown">
-    <div>
-        <button class="btn back" onclick="window.history.back()">
-            <span class="icon">{{- partial "utilities/icon.html" "arrow-left.svg" -}}</span>
-            {{- T "Articles.BackButtonLabel" -}}
-        </button>
-    </div>
+    <div>{{- partialCached "utilities/back.html" . -}}</div>
 
     <section class="content">
         {{- .Content -}}

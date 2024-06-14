@@ -21,11 +21,25 @@ const Application = {
 
         const themeToggle = document.getElementById('theme-toggle');
         new ColorSchemeUtility(themeToggle);
+    },
+
+    AddBackButtonListener: () => {
+        document.querySelectorAll("[data-js-action='back']").forEach((el: Element) => {
+            el.addEventListener('click', (evt: Event) => {
+                if (document.referrer.indexOf(window.location.host) !== -1) { 
+                    evt.preventDefault();
+                    history.back();
+                } else {
+                    window.location.replace("/");
+                }
+            });
+        });
     }
 }
 
 const OnApplicationLoad = () => {
     Application.InitializeColorSchemeToggle();
+    Application.AddBackButtonListener();
 }
 
 
