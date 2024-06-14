@@ -38,14 +38,35 @@ const Application = {
 
     AddGalleryScrollListener: () => {
         const gallery = document.querySelector("[data-gallery-scroll]") as HTMLElement;
+        const popup = document.querySelector(".popup") as HTMLElement;
+
+        if (!gallery || !popup) return;
+
+        popup.addEventListener('click', () => {
+            // Clear children
+            popup.innerHTML = '';
+
+            // Hide popup viewer
+            popup.classList.add("hidden");
+        });
 
         [...gallery.children].forEach((el: Element) => {
             el.addEventListener('click', (evt: Event) => {
-                gallery.dataset.galleryScroll = (gallery.dataset.galleryScroll == "false") ? "true" : "false";
-                
-                // if (el.classList.contains("span"))
-                //     el.classList.remove("span");
-                // else el.classList.add("span");
+                // Clone element
+                const cloneElement = el.cloneNode(true);
+                cloneElement.addEventListener('click', () => {
+                    // Clear children
+                    popup.innerHTML = '';
+
+                    // Hide popup viewer
+                    popup.classList.add("hidden");
+                })
+
+                // Show popup viewer
+                popup.classList.remove("hidden");
+
+                // Add clone to popup viewer
+                popup.appendChild(cloneElement);
             })
         })
     }
