@@ -50,10 +50,17 @@ const Application = {
             popup.classList.add("hidden");
         });
 
-        [...gallery.children].forEach((el: Element) => {
+        [...gallery.children].forEach((el: HTMLElement) => {
             el.addEventListener('click', (evt: Event) => {
                 // Clone element
-                const cloneElement = el.cloneNode(true);
+                const cloneElement = el.cloneNode(true) as HTMLElement;
+
+                let fullImageURL = el.dataset.image;
+                let cloneImage = cloneElement.querySelector("img");
+                if (!fullImageURL || !cloneImage) return;
+
+                cloneImage.src = fullImageURL;
+
                 cloneElement.addEventListener('click', () => {
                     // Clear children
                     popup.innerHTML = '';
