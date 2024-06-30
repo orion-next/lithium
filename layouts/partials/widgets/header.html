@@ -1,16 +1,5 @@
 <aside class="widget header">
     <header class="d:flex flex:col gap:1.25em">
-        {{- with .Params.image -}}
-        <figure>
-            {{- $imageLink := partial "utilities/image.html" . -}}
-            {{- if $imageLink -}}
-            <img class="w:full h:full r:300px" src="{{- $imageLink -}}" loading="lazy" alt="Avatar">
-            {{- else -}}
-            {{- errorf "Avatar could not be loaded from %q." . -}}
-            {{- end -}}
-        </figure>
-        {{- end -}}
-
         <section class="content">
             <h3>{{- .Params.title -}}</h3>
             {{- with .Params.description -}}
