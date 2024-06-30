@@ -18,7 +18,8 @@
             {{- $permalink = $resource.RelPermalink -}}
         {{- else -}}
             <!-- Image Reference is a relative link -->
-            {{- $permalink = relURL $imageReference -}}
+            {{- $permalink = absURL $imageReference -}}
+            {{ warnf "%s" $permalink }}
         {{- end -}}
     {{- end -}}
 {{- end -}}
