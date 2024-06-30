@@ -1,6 +1,7 @@
 <!-- Open Graph Tags -->
-<meta property="og:title" content="{{- .Site.Title -}}" />
-<meta property="og:url" content="{{- .Site.BaseURL -}}" />
+{{- $title := partialCached "base/_title.html" . .RelPermalink -}}
+<meta property="og:title" content="{{- $title -}}" />
+<meta property="og:url" content="{{- .Permalink -}}" />
 
 {{- with .Params.locale -}}
 <meta property='og:locale' content='{{ . }}'>
