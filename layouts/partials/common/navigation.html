@@ -1,0 +1,15 @@
+<section>
+    <!-- Navigation Links -->
+    {{- with .Site.Params.pages -}}
+    <ul class="d:flex flex:row gap:1em">
+        {{- range . -}}
+        {{- $target := default "blank" .target -}}
+        <li>
+            <a class="nav {{ .id }}" href="{{- .url -}}" target="_self" title="{{- .name -}}">
+                {{- .name -}}
+            </a>
+        </li>
+        {{- end -}}
+    </ul>
+    {{- end -}}
+</section>

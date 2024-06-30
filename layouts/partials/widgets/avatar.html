@@ -1,9 +1,9 @@
-<aside class="widget header">
-    <header class="d:flex flex:col gap:1.25em">
+<aside class="widget avatar">
+    <header>
         {{- with .Params.image -}}
         <figure>
             {{- with resources.Get . -}}
-            <img class="w:full h:full r:300px" src="{{- .RelPermalink -}}" loading="lazy" alt="Avatar">
+            <img class="avatar image" src="{{- .RelPermalink -}}" loading="lazy" alt="Avatar">
             {{- end -}}
         </figure>
         {{- end -}}
@@ -17,4 +17,5 @@
     </header>
 
     {{- partialCached "widgets/social.html" . -}}
+    {{- partialCached "common/navigation.html" . -}}
 </aside>

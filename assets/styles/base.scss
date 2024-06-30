@@ -79,7 +79,6 @@ main {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    gap: 1em;
 }
 
 svg {
@@ -127,4 +126,29 @@ svg {
 .toolbar {
     width: 100%;
     padding: 0 1em;
+}
+
+.nav {
+    //d:flex bg-primary ai:center jc:center p:8px r:5px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: var(--text-secondary-color);
+    
+    transition: all var(--transition-duration) ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        font-weight: bold;
+    }
+
+    &:active {
+        transform: scale(0.95);
+        font-weight: bold;
+    }
 }

@@ -2,26 +2,30 @@
 
 {{- partial "widgets/header.html" . -}}
 
-<div class="toolbar">
-    {{- partialCached "utilities/back.html" . -}}
-</div>
+<section class="gallery-container">
 
-<section class="gallery" data-gallery-scroll="false">
-    {{- $itemsList := shuffle .Params.content -}}
-    {{- range $itemsList -}}
+    <div class="toolbar">
+        {{- partialCached "utilities/back.html" . -}}
+    </div>
+    
+    <section class="gallery" data-gallery-scroll="false">
 
-    {{- $image := resources.Get .url -}}
-    {{- $thumbnail := $image.Resize "400x" -}}
+        {{- $itemsList := shuffle .Params.content -}}
+        {{- range $itemsList -}}
 
-    <figure class="item" data-image="{{- $image.RelPermalink -}}">
-        <img src="{{- $thumbnail.RelPermalink -}}" />
-        {{- with .caption -}}
-        <figcaption class="caption">
-            <p>{{- . -}}</p>
-        </figcaption>
+        {{- $image := resources.Get .url -}}
+        {{- $thumbnail := $image.Resize "400x" -}}
+
+        <figure class="item" data-image="{{- $image.RelPermalink -}}">
+            <img src="{{- $thumbnail.RelPermalink -}}" />
+            {{- with .caption -}}
+            <figcaption class="caption">
+                <p>{{- . -}}</p>
+            </figcaption>
+            {{- end -}}
+        </figure>
         {{- end -}}
-    </figure>
-    {{- end -}}
+    </section>
 </section>
 
 <section class="popup hidden"></section>

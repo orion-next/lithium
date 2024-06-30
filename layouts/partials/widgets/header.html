@@ -1,4 +1,5 @@
 <aside class="widget header">
+
     <header class="d:flex flex:col gap:1.25em">
         <section class="content">
             <h3>{{- .Params.title -}}</h3>
@@ -9,4 +10,5 @@
     </header>
 
     {{- partialCached "widgets/social.html" . -}}
+    {{- partialCached "common/navigation.html" . -}}
 </aside>
