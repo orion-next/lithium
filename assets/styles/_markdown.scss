@@ -19,13 +19,14 @@
     --md-line-color: #333746AB;
     --md-accent-color: #EDC84C90;
 
+    --md-cta-bg-color: #2E303A;
+    --md-cta-bg-hover-color: rgba(81, 86, 107, 0.671);
+
     background: var(--md-background-color);
     color: var(--md-color);
     padding: 2em;
     border-radius: 1em;
     width: 100%;
-    text-wrap: wrap;
-    word-break: break-all;
     max-width: var(--article-max-width);
 
     h1,
@@ -95,9 +96,9 @@
         text-decoration: underline;
     }
 
-    p {
-        font-size: 1.15em;
-    }
+    // p {
+    //     font-size: 1.15em;
+    // }
 
     ul,
     ol {
@@ -273,10 +274,34 @@
     figure,
     img {
         margin: 24px 0;
+        border-radius: 0.5em;
 
         &.custom-img-svg {
             display: inline-block;
             margin: 0;
         }
+    }
+
+    .cta {
+        display: inline-block;
+        background: var(--md-cta-bg-color);
+        padding: 0.75em 1em;
+        border-radius: 0.5em;
+        text-decoration: none;
+        color: var(--md-color);
+
+        &:hover {
+            background: var(--md-cta-bg-hover-color);
+            text-decoration: none;
+            transform: scale(1.025);
+        }
+        
+        &:active {
+            background: var(--md-cta-bg-hover-color);
+            text-decoration: none;
+            transform: scale(0.975);
+        }
+        
+        transition: all var(--transition-duration) ease;    
     }
 }
