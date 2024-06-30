@@ -80,7 +80,7 @@ const Application = {
 }
 
 const OnApplicationLoad = () => {
-    Application.InitializeColorSchemeToggle();
+    // Application.InitializeColorSchemeToggle();
     Application.AddBackButtonListener();
     Application.AddGalleryScrollListener();
 }
