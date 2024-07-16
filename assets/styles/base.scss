@@ -132,11 +132,11 @@ svg {
 
 .nav-item {
     &[data-page-active="true"] {
-        font-weight: bold;
+        color: var(--text-accent-color);
         pointer-events: none;
     }
 
-    //d:flex bg-primary ai:center jc:center p:8px r:5px
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,11 +147,22 @@ svg {
 
     color: var(--text-secondary-color);
     
-    transition: all var(--transition-duration) ease;
+    transition: all 0.2s ease;
 
-    &:hover {
-        transform: translateY(-2px);
-        font-weight: bold;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--text-accent-color);
+        width: 0px;
+        transition: width 0.2s ease;
+    }
+
+    &:hover{
+        color: var(--text-accent-color);
+        &::before { width: 20px; }
     }
 
     &:active {
