@@ -1,12 +1,28 @@
 {{- define "main" -}}
 
-<!-- Show author (if enabled) -->
-{{- partial "widgets/avatar.html" . -}}
+<header class="widget avatar">
+    {{- with .Site.Params.avatar -}}
+    <figure>
+        {{- with resources.Get . -}}
+        <img class="avatar image" src="{{- .RelPermalink -}}" loading="lazy" alt="Avatar">
+        {{- end -}}
+    </figure>
+    {{- end -}}
 
-{{ $content := partial "utilities/articles-list.html" . }}
+    <section class="content">
+        <h3>{{- .Site.Params.author -}}</h3>
+        {{- with .Site.Params.description -}}
+        <p class="secondary">{{- . -}}</p>
+        {{- end -}}
+    </section>
+    {{- partialCached "widgets/social.html" . -}}
+    {{- partialCached "common/navigation.html" . -}}
+</header>
 
-<section class="article list">
+{{ $content := partial "article/articles.list.html" . }}
+
 {{- if $content -}}
+<section class="article list">
     {{- range $content.Pagination.Pages -}}
         <a class="article card" href="{{- .RelPermalink -}}">
             {{- if .Params.series -}}
@@ -16,22 +32,16 @@
                 {{- end -}}
             </section>
             {{- end -}}
-            {{- partial "article/header.html" . -}}
+            {{- partial "article/article.preview.html" . -}}
         </a>
     {{- end -}}
-{{- else -}}
-    <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
-{{- end -}}
 </section>
+{{- else -}}
+<section>
+    <h3 class="">{{- default "Writing the first blog article is always a challenge!" .Site.Params.Translations.DefaultArticlesMessage -}}</h3>
+</section>
+{{- end -}}
 
 <!-- Pagination -->
 {{- partial "common/pagination.html" . -}}
-
-<!-- Show widgets (if enabled) -->
-{{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
-<aside class="aside">
-    {{- partial "widgets/search.html" . -}}
-    {{- partial "widgets/tags.html" . -}}
-</aside>
-{{- end -}}
 {{- end -}}

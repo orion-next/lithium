@@ -1,0 +1,23 @@
+{{- $ShowReadingTime := default true .Params.Display.ReadingTime -}}
+{{- $ShowArticleDate := and (not .Date.IsZero) (default true .Params.Display.Date) -}}
+{{- if or $ShowReadingTime $ShowArticleDate -}}
+<div class="article footer">
+    {{- if $ShowArticleDate -}}
+    <span>
+        <i>{{- partial "utilities/icon.html" "calendar.svg" -}}</i>
+        <time>
+            {{- .Date.Format .Site.Params.Articles.DateFormat -}}
+        </time>
+    </span>
+    {{- end -}}
+
+    {{- if $ShowReadingTime -}}
+    <span>
+        <time>
+            {{- .ReadingTime -}}&nbsp;MIN
+        </time>
+        <i>{{- partial "utilities/icon.html" "clock.svg" -}}</i>
+    </span>
+    {{- end -}}
+</div>
+{{- end -}}

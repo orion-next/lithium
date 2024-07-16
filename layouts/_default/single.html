@@ -1,14 +1,23 @@
 {{- define "main" -}}
-
-{{- partial "widgets/header.html" . -}}
+<header class="widget header">
+    {{- partialCached "widgets/social.html" . -}}
+    {{- partialCached "common/navigation.html" . -}}
+</header>
 
 <article class="markdown">
     <div>{{- partialCached "utilities/back.html" . -}}</div>
+    <header class="title">
+        <h3>{{- .Params.title -}}</h3>
+        {{- with .Params.description -}}
+        <p class="secondary">{{- . -}}</p>
+        {{- end -}}
+    </header>
 
+    {{- partial "article/article.footer.html" . -}}
     <section class="content">
         {{- .Content -}}
     </section>
 </article>
 
-{{- partial "article/footer.html" . -}}
+{{- partial "article/article.related.html" . -}}
 {{- end -}}

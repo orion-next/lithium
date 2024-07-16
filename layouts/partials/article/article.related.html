@@ -1,0 +1,16 @@
+{{ $relatedContent := .Site.RegularPages.Related . | first 2 }}
+{{ $relatedContentHeader := .Site.Params.Translations.RelatedContentHeader }}
+{{ with $relatedContent }}
+<aside class="article related">
+    <h3 class="title">{{- default "Related Content" $relatedContentHeader -}}</h3>
+    <div class="content">
+        <div class="list">
+            {{ range . }}
+            <a class="article card" href="{{- .RelPermalink -}}">
+                {{ partial "article/article.preview.html" . }}
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</aside>
+{{ end }}

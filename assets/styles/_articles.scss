@@ -53,37 +53,41 @@ a.article.card {
     transition: all var(--transition-duration) ease-out;
 }
 
+article {
+    header.title {
+        margin-bottom: 1rem;
+        h3 { margin: 0 !important; }
+    }
 
-.article.header {
+    .content {
+        margin-top: 1.5rem;
+    }
+}
+
+.article.footer {
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: 1em;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    font-size: var(--text-size-sm);
+    color: var(--text-muted-color);
 
-    .footer {
+    span {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-top: auto;
-        font-size: var(--text-size-sm);
-        color: var(--text-muted-color);
+        text-transform: uppercase;
 
-        span {
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
+        time {
+            margin: 0 0.25em;
+        }
 
-            time {
-                margin: 0 0.25em;
-            }
+        i {
+            margin: 0 0.15em;
 
-            i {
-                margin: 0 0.15em;
-
-                svg {
-                    width: 1.25em;
-                    height: 1.25em;
-                }
+            svg {
+                width: 1.25em;
+                height: 1.25em;
             }
         }
     }
@@ -145,10 +149,6 @@ a.article.card {
         width: var(--icon-size);
         height: var(--icon-size);
     }
-}
-
-article .content {
-    margin-top: 2em;
 }
 
 .article.related {

@@ -12,7 +12,7 @@ $breakpoint-lg: 1024px;
 @import "./widgets/gallery.scss";
 
 :root {
-    --global-gap: 2em;
+    --global-gap: 1em;
     --global-radius: 1em;
     --transition-duration: 250ms;
     --svg-icon-size: 20px;
@@ -108,6 +108,7 @@ svg {
 
     // background-color: var(--background-accent-color);
     text-transform: uppercase;
+    margin-bottom: 1.5em;
 
     &:hover {
         opacity: 0.8;
@@ -128,7 +129,12 @@ svg {
     padding: 0 1em;
 }
 
-.nav {
+.nav-item {
+    &[data-page-active="true"] {
+        font-weight: bold;
+        pointer-events: none;
+    }
+
     //d:flex bg-primary ai:center jc:center p:8px r:5px
     display: flex;
     align-items: center;

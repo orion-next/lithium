@@ -1,13 +1,12 @@
+{{- $CurrentPage := . -}}
 <section>
-    <!-- Navigation Links -->
-    {{- with .Site.Params.pages -}}
+    {{- with .Site.Menus.main -}}
+    <!-- Bug: Current menu item not marked as active -->
     <ul class="d:flex flex:row gap:1em">
         {{- range . -}}
-        {{- $target := default "blank" .target -}}
-        <li>
-            <a class="nav {{ .id }}" href="{{- .url -}}" target="_self" title="{{- .name -}}">
-                {{- .name -}}
-            </a>
+        {{- $PageActive := ($CurrentPage.IsMenuCurrent .Menu .) -}}  
+        <li class="nav-item" data-page-active="{{- $PageActive -}}">
+            <a href="{{- .URL -}}" target="_self" title="{{- .Name -}}">{{- .Name -}}</a>
         </li>
         {{- end -}}
     </ul>

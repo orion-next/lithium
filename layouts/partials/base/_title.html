@@ -1,4 +1,4 @@
-{{- $title := .Title -}}
+{{- $title := printf "%s - %s" .Site.Title .Title -}}
 {{- $siteTitle := .Site.Title -}}
 
 {{- if .IsHome -}}

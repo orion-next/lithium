@@ -20,7 +20,7 @@
         {{- if $ShowReadingTime -}}
         <span>
             <time>
-                {{- T "Articles.ReadTime" .ReadingTime -}}
+                {{- .ReadingTime -}}&nbsp;MIN
             </time>
             <i>{{- partial "utilities/icon.html" "clock.svg" -}}</i>
         </span>

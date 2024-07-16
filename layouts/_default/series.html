@@ -1,36 +1,26 @@
 {{- define "main" -}}
-<main class="container">
-    <!-- Show articles list -->
-    {{- $content := .Pages -}}
-    
-    <section class="article list">
-    {{- if $content -}}
-        {{- range $content -}}
-            <a class="article card" href="{{- .RelPermalink -}}">
-                {{- if .Params.series -}}
-                <section class="article tags">
-                    {{- range (.GetTerms "series") -}}
-                        <span class="tag" data-tag="{{ $.IsPage }}">{{- .LinkTitle -}}</span>
-                    {{- end -}}
-                </section>
-                {{- end -}}
-                {{- partial "article/header.html" . -}}
-            </a>
-        {{- end -}}
-    {{- else -}}
-        <h3>{{- T "Errors.NoArticlesFound" -}}</h3>
-    {{- end -}}
-    </section>
-    
-    <!-- Pagination -->
-    {{- partial "common/pagination.html" . -}}
+<!-- Show articles list -->
+{{- $content := .Pages -}}
 
-    <!-- Show widgets (if enabled) -->
-    {{- if and (default true .Site.Params.Features.Widgets) (default false .Params.Widgets.Browse) -}}
-    <aside class="aside">
-        {{- partial "widgets/search.html" . -}}
-        {{- partial "widgets/tags.html" . -}}
-    </aside>
+<section class="article list">
+{{- if $content -}}
+    {{- range $content -}}
+        <a class="article card" href="{{- .RelPermalink -}}">
+            {{- if .Params.series -}}
+            <section class="article tags">
+                {{- range (.GetTerms "series") -}}
+                    <span class="tag" data-tag="{{ $.IsPage }}">{{- .LinkTitle -}}</span>
+                {{- end -}}
+            </section>
+            {{- end -}}
+            {{- partial "article/article.preview.html" . -}}
+        </a>
     {{- end -}}
-</main>
+{{- else -}}
+    <h3>{{- default "NO CONTENT AVAILABLE" .Site.Params.Translations.DefaultArticlesMessage -}}</h3>
+{{- end -}}
+</section>
+
+<!-- Pagination -->
+{{- partial "common/pagination.html" . -}}
 {{- end -}}

@@ -1,106 +1,92 @@
-baseURL: 'https://orion-next--hydrogen.web.app'
-languageCode: "en-gb"
+BaseURL: 'https://example.org/'
+LanguageCode: "en"
 
-title: "Vidush H. Namah"
+Theme: lithium
+ThemesDir: ../../
 
-theme: lithium
-themesDir: ../../
+# Site Title
+Title: Vidush H. Namah
 
-paginate: 12
+Paginate: 12
 
 # googleAnalytics: G-XXX
 
-permalinks:
+PERMALINKS:
   Post: /a/:slug/
   Page: /:slug/
 
-params:
-  meta:
-    description: "Experience seamless design and innovative features tailored for success in the digital landscape."
-    keywords: [ "Technology", "Photography" ]
-    image: "/images/meta-image.png"
-    avatar: "/images/avatar.png"
-    author: "Vidush H. Namah"
+PARAMS:
+  Image: default.png
+  Avatar: default.png
+  Author: "John Smith"
 
-  directory:
-    blog: "articles"
+  Directory:
+    Blog: "articles"
   
-  articles:
-    dateformat: "2006.01.02"
+  Articles:
+    Dateformat: "2006.01.02"
 
-  themes:
-    toggle: true
-    default: dark
+  Themes:
+    Toggle: true
+    Default: dark
   
-  footer:
+  Footer:
     Since: 2014
 
-  features:
-    widgets: false
+RELATED:
+  IncludeNewer: true
+  Threshold: 60
+  ToLower: false
+  Indices:
+    - Name: series
+      Weight: 100
 
-  ## Supported target: self, blank
-  social:
-    - id: home
-      name: Home
-      url: /
-      icon: home.svg
+Markup:
+  # Code previews settings
+  Highlight:
+    NoClasses: true
+    CodeFences: true
+    GuessSyntax: true
+    TabWidth: 4
+    LineNoStart: 1
+    LineNos: true
 
-    - id: github
-      name: GitHub
-      url: https://github.com/vnsnippets
-      icon: github.svg
+Youtube:
+  PrivacyEnhanced: true
 
-    - id: linkedin
-      name: LinkedIn
-      url: https://linkedin.com/in/vnamah
-      icon: linkedin.svg
+TAXONOMIES:
+  Series: series
 
-    - id: instagram
-      name: Instagram
-      url: https://instagram.com/vnsnippets
-      icon: instagram.svg
+LANGUAGES:
+  EN:
+    MENU:
+      Main:
+      - Name: Home
+        URL: /
+        Weight: 10
 
-    - id: gallery
-      name: Gallery
-      url: /gallery
-      icon: camera.svg
-      target: self
+      - Name: Gallery
+        URL: /gallery
+        Weight: 20
 
-    - id: about
-      name: About
-      url: /about
-      icon: info.svg
-      target: self
+      - Name: About
+        URL: /about
+        Weight: 30
+      
+      Social:
+      - Name: GitHub
+        URL: https://github.com/vnsnippets
 
-menu:
-  main: []
+      - Name: LinkedIn
+        URL: https://linkedin.com/in/vnamah
 
-related:
-  includenewer: true
-  threshold: 60
-  toLower: false
-  indices:
-    - name: series
-      weight: 100
-
-markup:
-    goldmark:
-        renderer:
-            unsafe: false
-    # tableOfContents:
-    #     endLevel: 4
-    #     ordered: true
-    #     startLevel: 3
-    highlight:
-      noClasses: true
-      codeFences: true
-      guessSyntax: true
-      tabWidth: 4
-      lineNoStart: 1
-      lineNos: true
-
-youtube:
-  privacyEnhanced: true
-
-taxonomies:
-  series: series
+      - Name: Instagram
+        URL: https://instagram.com/the.frame.drops
+        
+    PARAMS:
+      Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      Keywords: [ "Sample", "Technology", "Photography" ]
+      Translations:
+        FooterMessage: Orion Next (Mauritius)
+        DefaultArticlesMessage: NO CONTENT AVAILABLE
+        RelatedContentHeader: Related Content

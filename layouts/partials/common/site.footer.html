@@ -6,6 +6,6 @@
         {{ now.Format "2006" }}
     </p>
     <p class="ml:0.25em uppercase f:bold">
-        {{ T "Footer.Message" -}}
+        {{ default .Site.Title .Site.Params.Translations.FooterMessage -}}
     </p>
 </footer>

@@ -1,13 +1,12 @@
 <section>
     <!-- Social Links -->
-    {{- with .Site.Params.social -}}
+    {{- with .Site.Menus.social -}}
     <ul class="d:flex flex:row gap:10px">
         {{- range . -}}
-        {{- $target := default "blank" .target -}}
         <li>
-            <a class="social {{ .id }}" href="{{- .url -}}" target="_{{- $target -}}" title="{{- .name -}}">
-                {{- with .icon -}}
-                {{- $icon := printf "/navigation/%s" . -}}
+            <a class="social {{ .Identifier }}" href="{{- .URL -}}" target="_blank" title="{{- .Name -}}">
+                {{- with .Name -}}
+                {{- $icon := printf "/navigation/%s.svg" . -}}
                 {{- partial "utilities/icon.html" $icon -}}
                 {{- end -}}
             </a>

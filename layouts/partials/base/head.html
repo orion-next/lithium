@@ -2,11 +2,11 @@
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-{{- with .Site.Params.meta.description -}}
+{{- with .Site.Params.description -}}
 <meta name="description" content="{{- . -}}" />
 {{- end -}}
 
-{{- with .Site.Params.meta.keywords -}}
+{{- with .Site.Params.keywords -}}
 {{ $keywords := delimit . ", " }}
 <meta name="keywords" content="{{- $keywords -}}" />
 {{- end -}}
