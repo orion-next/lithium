@@ -14,8 +14,9 @@
     color: var(--white);
     
     transition: all var(--transition-duration) ease;
+
     &:hover {
-        transform: scale(1.025);
+        transform: scale(1.10);
     }
 
     svg {
@@ -24,42 +25,26 @@
     }
 }
 
+.social {
+    &[data-theme-coloured="true"] {
+        &.linkedin {
+            background-color: #0a66c2;
+        }
 
-.social.home {
-    background: linear-gradient(90deg, #3d586d 0%, #537895 100%);
-    background: -moz-linear-gradient(90deg, #3d586d 0%, #537895 100%);
-    background: -webkit-linear-gradient(90deg, #3d586d 0%, #537895 100%);
-    // background-color: #09203f;
-}
+        &.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        }
 
-.social.gallery {
-    background: linear-gradient(90deg, #30cfd0 0%, #0d6464 100%);
-    background: -moz-linear-gradient(90deg, #30cfd0 0%, #0d6464 100%);
-    background: -webkit-linear-gradient(90deg, #30cfd0 0%, #0d6464 100%);
-}
-
-.social.about {
-    background: linear-gradient(90deg, #5a68c6, #4448b1);
-    background: -moz-linear-gradient(90deg, #5a68c6, #4448b1);
-    background: -webkit-linear-gradient(90deg, #5a68c6, #4448b1);
-}
-
-.social.linkedin {
-    background-color: #0a66c2;
-}
-
-.social.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-}
-
-.social.github {
-    // background: linear-gradient(90deg, #3d00a6, #000e17);
-    // background: -moz-linear-gradient(90deg, #3d00a6, #000e17);
-    // background: -webkit-linear-gradient(90deg, #3d00a6, #000e17);
-    
-    background: linear-gradient(315deg, #473266, #3d00a6);
-    background: -moz-linear-gradient(315deg, #473266, #3d00a6);
-    background: -webkit-linear-gradient(315deg, #473266, #3d00a6);
+        &.github {
+            // background: linear-gradient(90deg, #3d00a6, #000e17);
+            // background: -moz-linear-gradient(90deg, #3d00a6, #000e17);
+            // background: -webkit-linear-gradient(90deg, #3d00a6, #000e17);
+            
+            background: linear-gradient(315deg, #473266, #3d00a6);
+            background: -moz-linear-gradient(315deg, #473266, #3d00a6);
+            background: -webkit-linear-gradient(315deg, #473266, #3d00a6);
+        }
+    }
 }

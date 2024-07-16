@@ -101,15 +101,7 @@ section.gallery {
         overflow: hidden;
         column-span: none;
         cursor: pointer;
-        
-        transition: all var(--transition-duration) ease;
-
-        &.span {
-            column-span: all;
-        }
     }
-    
-    transition: all var(--transition-duration) ease;
 }
 
 .popup {
@@ -136,7 +128,7 @@ section.gallery {
             height: 100%;
             opacity: 0;
 
-            animation: fade-in 300ms ease-in-out forwards;
+            animation: fade-in 0.3s ease-in-out forwards;
         }
     }
 }

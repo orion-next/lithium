@@ -1,10 +1,11 @@
 <section>
     <!-- Social Links -->
+     {{- $ColorfulButtons := .Site.Params.Theme.Coloured.Social -}}
     {{- with .Site.Menus.social -}}
     <ul class="d:flex flex:row gap:10px">
         {{- range . -}}
         <li>
-            <a class="social {{ .Identifier }}" href="{{- .URL -}}" target="_blank" title="{{- .Name -}}">
+            <a class="social {{ lower .Name }}" data-theme-coloured="{{- $ColorfulButtons -}}" href="{{- .URL -}}" target="_blank" title="{{- .Name -}}">
                 {{- with .Name -}}
                 {{- $icon := printf "/navigation/%s.svg" . -}}
                 {{- partial "utilities/icon.html" $icon -}}

@@ -1,4 +1,5 @@
 {{- define "main" -}}
+{{- $IsPreviewColored := .Site.Params.Theme.Coloured.Preview -}}
 
 <header class="widget avatar">
     {{- with .Site.Params.avatar -}}
@@ -15,7 +16,7 @@
         <p class="secondary">{{- . -}}</p>
         {{- end -}}
     </section>
-    {{- partialCached "widgets/social.html" . -}}
+    {{- partialCached "widgets/menu.social.html" . -}}
     {{- partialCached "common/navigation.html" . -}}
 </header>
 
@@ -24,7 +25,7 @@
 {{- if $content -}}
 <section class="article list">
     {{- range $content.Pagination.Pages -}}
-        <a class="article card" href="{{- .RelPermalink -}}">
+        <a class="article preview" href="{{- .RelPermalink -}}" data-theme-coloured="{{- $IsPreviewColored -}}">
             {{- if .Params.series -}}
             <section class="article tags">
                 {{- range (.GetTerms "series") -}}
