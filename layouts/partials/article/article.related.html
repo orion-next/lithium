@@ -3,14 +3,12 @@
 {{ with $relatedContent }}
 <aside class="article related">
     <h3 class="title">{{- default "Related Content" $relatedContentHeader -}}</h3>
-    <div class="content">
-        <div class="list">
-            {{ range . }}
-            <a class="article card" href="{{- .RelPermalink -}}">
-                {{ partial "article/article.preview.html" . }}
-            </a>
-            {{ end }}
-        </div>
+    <div class="list">
+        {{ range . }}
+        <a class="article card" href="{{- .RelPermalink -}}">
+            {{ partial "article/article.preview.html" . }}
+        </a>
+        {{ end }}
     </div>
 </aside>
 {{ end }}

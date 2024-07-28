@@ -1,11 +1,13 @@
 {{ $output := 0 }}
 
-{{- $blogPages := where .Site.RegularPages "Section" .Site.Params.directory -}}
+{{- $targetPages := where .Site.RegularPages "Section" .Site.Params.directory -}}
 
-{{ if gt $blogPages 0 }}
-    {{ $filteredPages := where $blogPages "Params.hidden" "!=" true }}
-    {{ $paginatedPages := .Paginate ($filteredPages) }}
-    {{ $output = dict "Count" (len $filteredPages) "Pages" $filteredPages "Paginator" .Paginator "Pagination" $paginatedPages  }}
+{{ if gt $targetPages 0 }}
+    {{- if hugo.IsProduction -}}
+        {{ $targetPages = where $targetPages "Params.hidden" "!=" true }}
+    {{- end -}}
+    {{ $paginatedPages := .Paginate ($targetPages) }}
+    {{ $output = dict "Count" (len $targetPages) "Pages" $targetPages "Paginator" .Paginator "Pagination" $paginatedPages  }}
 {{ end }}
 
 {{ return $output }}

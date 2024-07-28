@@ -1,34 +1,39 @@
 :root {
     --white: #FFF;
     --black: #000;
+
+    --font-size: 1em;
 }
 
-[data-color-scheme="dark"] {
+[data-color-scheme="dark"] {    
     --background-color: #1D1F25;
-    --background-primary-color: #33374675;
+    // --background-primary-color: #33374675;
     --background-secondary-color: #33374650;
     --background-accent-color: #333746;
     --background-dark-color: #14161a;
 
     --text-color: #C3C6CF;
     --text-secondary-color: #9A9FAE;
-    --text-tertiary-color: rgb(166, 171, 184);
+    // --text-tertiary-color: rgb(166, 171, 184);
     --text-muted-color: #9A9FAE90;
     --text-accent-color: #d7d8df;
+}
 
-    --font-size: 1em;
+[data-color-scheme="light"] {    
+    --background-color: #FFFFFF;
+    --background-primary-color: #eceff1;
+    --background-secondary-color: #f8f9fa;
+    --background-accent-color: #333746;
+    --background-dark-color: #14161a;
+
+    --text-color: #050505;
+    --text-secondary-color: #151515;
+    --text-muted-color: #05050590;
+    --text-accent-color: #010101;
 }
 
 .bg-default {
     background-color: var(--background-color);
-}
-
-.bg-primary {
-    background-color: var(--background-primary-color);
-}
-
-.bg-secondary {
-    background-color: var(--background-secondary-color);
 }
 
 .bg-accent {
@@ -41,10 +46,6 @@
 
 .secondary {
     color: var(--text-secondary-color);
-}
-
-.tertiary {
-    color: var(--text-tertiary-color);
 }
 
 .accent {
