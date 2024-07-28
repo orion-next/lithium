@@ -1,3 +1,6 @@
-{{- $opts := dict "minify" hugo.IsProduction -}}
+{{- $unixNow := string time.Now.Unix -}}
+{{- $targetPath := printf "scripts/index.%s.js" $unixNow -}}
+
+{{- $opts := dict "minify" hugo.IsProduction "targetPath" $targetPath -}}
 {{- $script := resources.Get "scripts/index.ts" | js.Build $opts -}}
 <script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
