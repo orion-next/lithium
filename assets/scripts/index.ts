@@ -1,4 +1,4 @@
-import { ColorSchemeUtility } from "./theme.ts";
+import { ColorSchemeUtility } from "./theme";
 
 const Application = {
     InitializeColorSchemeToggle: () => {
@@ -50,7 +50,9 @@ const Application = {
             popup.classList.add("hidden");
         });
 
-        [...gallery.children].forEach((el: HTMLElement) => {
+        for (let i=0; i<gallery.children.length; i++) {
+            let el = gallery.children.item(i) as HTMLElement;
+
             el.addEventListener('click', (evt: Event) => {
                 // Clone element
                 const cloneElement = el.cloneNode(true) as HTMLElement;
@@ -75,17 +77,14 @@ const Application = {
                 // Add clone to popup viewer
                 popup.appendChild(cloneElement);
             })
-        })
+        }
     }
 }
 
-const OnApplicationLoad = () => {
-    // Application.InitializeColorSchemeToggle();
-    Application.AddBackButtonListener();
-    Application.AddGalleryScrollListener();
-}
-
-
 window.addEventListener('load', () => {
-    setTimeout(OnApplicationLoad, 0);
+    setTimeout(() => { 
+        Application.InitializeColorSchemeToggle();
+        Application.AddBackButtonListener();
+        Application.AddGalleryScrollListener();
+    }, 0);
 });

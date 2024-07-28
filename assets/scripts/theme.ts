@@ -1,7 +1,7 @@
 const COLOR_SCHEME_VALUES = [ 'light', 'dark', 'auto' ];
 type COLOR_SCHEME = 'light' | 'dark' | 'auto';
 
-const IsColorScheme = (value: string|null) : value is COLOR_SCHEME => value ? COLOR_SCHEME_VALUES.includes(value) : false;
+const IsColorScheme = (value: string|null) : value is COLOR_SCHEME => COLOR_SCHEME_VALUES.indexOf(value) > -1;
 
 class ColorSchemeUtility {
     private LocalStorageKey = `${window.location.hostname}-ColorScheme`;

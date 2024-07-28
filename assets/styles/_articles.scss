@@ -161,19 +161,33 @@ article {
 
 .article.related {
     max-width: var(--article-max-width);
-    padding: 0 var(--global-gap);
 
     .title {
         color: var(--text-secondary-color);
         font-weight: normal;
-        margin: 1em 0.5em 0.5em;
-
+        margin: 0.75em 1.5em;
     }
 
     .list {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 2em;
+        gap: 1em;
+    }
+
+    .content {
+        margin: 1em;
+    }
+
+    .article.card {        
+        color: var(--text-color);
+        background-color: var(--background-secondary-color);
+        
+        padding: 1.5em;
+        border-radius: 1em;
+
+        .footer {
+            margin-top: 1em;
+        }
     }
 
     @media (min-width: $breakpoint-md) {
@@ -181,11 +195,13 @@ article {
             padding: 0;
             grid-template-columns: 1fr 1fr;
         }
-    }
-}
 
-@media (min-width: $breakpoint-md) {
-    .article.related {
-        padding: 0;
+        .content {
+            margin: 1em 0;
+        }
+
+        .title {
+            margin: 0.75em 0.5em;
+        }
     }
 }

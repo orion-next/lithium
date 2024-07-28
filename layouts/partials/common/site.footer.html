@@ -1,11 +1,19 @@
-<footer class="global">
-    <p>
-        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) -}}
-            {{ .Site.Params.footer.since }} - 
-        {{ end -}}
-        {{ now.Format "2006" }}
-    </p>
-    <p class="ml:0.25em uppercase f:bold">
-        {{ default .Site.Title .Site.Params.Translations.FooterMessage -}}
-    </p>
+<footer class="global footer">
+    <div>
+        <p>
+            {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) -}}
+                {{ .Site.Params.footer.since }} - 
+            {{ end -}}
+            {{ now.Format "2006" }}
+        </p>
+        <p class="f:bold">
+            {{ default .Site.Title .Site.Params.Translations.FooterMessage -}}
+        </p>
+    </div>
+    <div>
+        <button id="theme-toggle">
+            <span class="light">{{- default "LIGHT MODE" .Site.Params.Translations.ThemeLabel.Light -}}</span>
+            <span class="dark">{{- default "DARK MODE" .Site.Params.Translations.ThemeLabel.Dark -}}</span>
+        </button>
+    </div>
 </footer>
