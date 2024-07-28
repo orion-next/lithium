@@ -5,6 +5,10 @@ const Application = {
         // Initialize theme toggle button
 
         const COLOR_SCHEME_KEY = `${window.location.hostname}-ColorScheme`;
+
+        // Force dark mode during beta phase
+        localStorage.setItem(COLOR_SCHEME_KEY, "dark");
+
         const savedScheme = localStorage.getItem(COLOR_SCHEME_KEY);
         const colorScheme = savedScheme ?? document.documentElement.dataset.defaultTheme ?? "auto";
         const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
