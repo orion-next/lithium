@@ -10,10 +10,14 @@
             {{ default .Site.Title .Site.Params.Translations.FooterMessage -}}
         </p>
     </div>
-    <div>
+    <div class="actions">
         <button id="theme-toggle">
             <span class="light">{{- default "LIGHT MODE" .Site.Params.Translations.ThemeLabel.Light -}}</span>
             <span class="dark">{{- default "DARK MODE" .Site.Params.Translations.ThemeLabel.Dark -}}</span>
         </button>
+        {{- if .Site.Params.footer.report.bugs -}}
+        <span>|</span>
+        <a class="muted" target="_blank" href="{{- .Site.Params.footer.report.bugs -}}">{{- default "REPORT A BUG" .Site.Params.Translations.ReportBugLabel -}}</a>
+        {{- end -}}
     </div>
 </footer>
