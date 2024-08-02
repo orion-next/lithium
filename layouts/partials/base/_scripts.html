@@ -3,4 +3,4 @@
 
 {{- $opts := dict "minify" hugo.IsProduction "targetPath" $targetPath -}}
 {{- $script := resources.Get "scripts/index.ts" | js.Build $opts -}}
-<script type="text/javascript" src="{{ $script.RelPermalink }}" defer></script>
+<script type="module" src="{{ $script.RelPermalink }}" defer></script>

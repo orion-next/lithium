@@ -4,9 +4,10 @@
 <html lang="{{ .Site.Language }}" data-color-scheme="{{- $ColorScheme -}}">
     <head>
         {{- partial "base/head.html" . -}}
+        {{- partialCached "base/_theme.html" . -}}
     </head>
 
-    <body>
+    <body data-loading="true">
         <main class="container">
         {{- block "main" . -}}{{- end -}}
         </main>

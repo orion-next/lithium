@@ -1,12 +1,12 @@
-const COLOR_SCHEME_VALUES = [ 'light', 'dark', 'auto' ];
+const COLOR_SCHEME_VALUES = ['light', 'dark', 'auto'];
 type COLOR_SCHEME = 'light' | 'dark' | 'auto';
 
-const IsColorScheme = (value: string|null) : value is COLOR_SCHEME => COLOR_SCHEME_VALUES.indexOf(value) > -1;
+const IsColorScheme = (value: string | null): value is COLOR_SCHEME => COLOR_SCHEME_VALUES.indexOf(value) > -1;
 
-class ColorSchemeUtility {
+export class ColorSchemeUtility {
     private LocalStorageKey = `${window.location.hostname}-ColorScheme`;
-    private CurrentScheme : COLOR_SCHEME;
-    private SystemPreferredScheme : COLOR_SCHEME;
+    private CurrentScheme: COLOR_SCHEME;
+    private SystemPreferredScheme: COLOR_SCHEME;
 
     constructor(toggleEl: HTMLElement | null) {
         this.BindMatchMedia();
@@ -17,7 +17,7 @@ class ColorSchemeUtility {
         if (toggleEl) this.BindClick(toggleEl);
     }
 
-    private BindClick(el : HTMLElement) {
+    private BindClick(el: HTMLElement) {
         el.addEventListener('click', () => {
             this.CurrentScheme = (this.IsColorSchemeDark()) ? 'light' : 'dark';
             this.UpdateHTMLColorScheme();
@@ -31,12 +31,12 @@ class ColorSchemeUtility {
         localStorage.setItem(this.LocalStorageKey, this.CurrentScheme);
     }
 
-    private ReadSavedSchemeFromStorage() : COLOR_SCHEME {
+    private ReadSavedSchemeFromStorage(): COLOR_SCHEME {
         const savedScheme = localStorage.getItem(this.LocalStorageKey);
         return IsColorScheme(savedScheme) ? savedScheme : 'auto';
     }
 
-    private IsColorSchemeDark = () => (this.CurrentScheme == 'dark' || this.CurrentScheme == 'auto' && this.SystemPreferredScheme == 'dark'); 
+    private IsColorSchemeDark = () => (this.CurrentScheme == 'dark' || this.CurrentScheme == 'auto' && this.SystemPreferredScheme == 'dark');
 
     private UpdateHTMLColorScheme() {
         document.documentElement.dataset.colorScheme = (this.IsColorSchemeDark()) ? 'dark' : 'light';
@@ -46,11 +46,11 @@ class ColorSchemeUtility {
     private BindMatchMedia() {
         const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         this.SystemPreferredScheme = mediaQuery.matches ? 'dark' : 'light';
-        
+
         mediaQuery.addEventListener('change', (e) => {
-                this.SystemPreferredScheme = e.matches ? 'dark' : 'light';
-                this.UpdateHTMLColorScheme();
-            }
+            this.SystemPreferredScheme = e.matches ? 'dark' : 'light';
+            this.UpdateHTMLColorScheme();
+        }
         );
     }
 
@@ -61,5 +61,3 @@ class ColorSchemeUtility {
         window.dispatchEvent(evt);
     }
 }
-
-export { ColorSchemeUtility };

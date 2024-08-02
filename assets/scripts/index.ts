@@ -3,26 +3,7 @@ import { ColorSchemeUtility } from "./theme";
 const Application = {
     InitializeColorSchemeToggle: () => {
         // Initialize theme toggle button
-
-        const COLOR_SCHEME_KEY = `${window.location.hostname}-ColorScheme`;
-
-        // Force dark mode during beta phase
-        // localStorage.setItem(COLOR_SCHEME_KEY, "dark");
-
-        const savedScheme = localStorage.getItem(COLOR_SCHEME_KEY);
-        const colorScheme = savedScheme ?? document.documentElement.dataset.defaultTheme ?? "auto";
-        const isDarkModePreferred = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        // Initialize saved theme settings to default value
-        if (!savedScheme) localStorage.setItem(COLOR_SCHEME_KEY, colorScheme);
-
-        // Set theme to correct value based on saved settings or user system preference
-        if (colorScheme == 'dark' || (colorScheme == 'auto' && isDarkModePreferred)) {
-            document.documentElement.dataset.colorScheme = 'dark';
-        } else {
-            document.documentElement.dataset.colorScheme = 'light';
-        }
-
+            
         const themeToggle = document.getElementById('theme-toggle');
         new ColorSchemeUtility(themeToggle);
     },
@@ -70,6 +51,10 @@ const Application = {
                 cloneElement.addEventListener('click', () => {
                     // Clear children
                     popup.innerHTML = '';
+                    
+                    // Reset scrolling
+                    document.body.dataset.preventScroll = "false";
+                    document.body.style.top = '';
 
                     // Hide popup viewer
                     popup.classList.add("hidden");
@@ -77,6 +62,10 @@ const Application = {
 
                 // Show popup viewer
                 popup.classList.remove("hidden");
+
+                // Prevent background scrolling
+                document.body.dataset.preventScroll = "true";
+                document.body.style.top = `-${window.scrollY}px`;
 
                 // Add clone to popup viewer
                 popup.appendChild(cloneElement);
@@ -86,9 +75,11 @@ const Application = {
 }
 
 window.addEventListener('load', () => {
-    setTimeout(() => { 
+    setTimeout(() => {
         Application.InitializeColorSchemeToggle();
         Application.AddBackButtonListener();
         Application.AddGalleryScrollListener();
+
+        // document.body.dataset.loading = "false";
     }, 0);
 });

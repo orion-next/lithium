@@ -41,7 +41,15 @@ $breakpoint-lg: 1024px;
     }
 }
 
+@keyframes slide-in {
+    0% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
 
+@keyframes fade-in {
+    0% { opacity: 50%; }
+    100% { opacity: 100%; }
+}
 
 html {
     background-color: var(--background-color);
@@ -70,9 +78,16 @@ body {
     max-width: 1400px;
     margin: auto;
 
-    * {
-        transition: all var(--transition-duration) ease;
-    }
+    transition: all var(--transition-duration) ease;
+    animation: slide-in 200ms linear;
+
+    // &[data-loading="true"] {
+    //     opacity: 0;
+    // }
+
+    // &[data-loading="false"] {
+    //     opacity: 1;
+    // }
 
     footer {
         color: var(--text-muted-color);
