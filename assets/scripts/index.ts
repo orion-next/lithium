@@ -80,6 +80,6 @@ window.addEventListener('load', () => {
         Application.AddBackButtonListener();
         Application.AddGalleryScrollListener();
 
-        // document.body.dataset.loading = "false";
+        document.body.dataset.loading = "false";
     }, 0);
 });
